@@ -17,7 +17,8 @@
     "footerText": "© 2024 Aqua. Tous droits réservés."
   },
   "leads": {
-    "title": "Gérez les prospects, opportunités et devis",
+    "title": "Leads",
+    "subtitle": "Gérez les prospects, opportunités et devis",
     "list": {
       "search": {
         "placeholder": "Rechercher des prospects par nom, e-mail, téléphone..."

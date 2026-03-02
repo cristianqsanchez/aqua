@@ -15,7 +15,8 @@
     "footerText": "© 2024 Aqua. All rights reserved."
   },
   "leads": {
-    "title": "Manage leads, opportunities and quotes",
+    "title": "Leads",
+    "subtitle": "Manage leads, opportunities and quotes",
     "list": {
       "search": {
         "placeholder": "Search leads by name, email, phone..."
