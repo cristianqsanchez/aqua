@@ -259,5 +259,225 @@
         "other": "Other"
       }
     }
+  },
+  "accounts": {
+    "title": "Manage customer and partner accounts",
+    "subtitle": "Create, update and organize your account portfolio",
+    "list": {
+      "search": {
+        "placeholder": "Search accounts by name, number, email or phone..."
+      },
+      "filters": {
+        "accountType": {
+          "label": "Type"
+        },
+        "relationshipStatus": {
+          "label": "Status"
+        }
+      },
+      "stats": {
+        "total": "Total Accounts",
+        "activeCustomers": "Active Customers",
+        "prospects": "Prospects",
+        "partners": "Partners"
+      },
+      "table": {
+        "number": "Number",
+        "name": "Name",
+        "type": "Type",
+        "status": "Status",
+        "industry": "Industry",
+        "contact": "Contact",
+        "location": "Location",
+        "annualRevenue": "Annual Revenue",
+        "actions": "Actions"
+      },
+      "accountType": {
+        "customer": "Customer",
+        "prospect": "Prospect",
+        "partner": "Partner",
+        "supplier": "Supplier"
+      },
+      "relationshipStatus": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "prospect": "Prospect",
+        "partner": "Partner"
+      },
+      "empty": {
+        "title": "No accounts yet",
+        "subtitle": "Create your first account to start managing relationships",
+        "filteredTitle": "No matching accounts",
+        "filteredSubtitle": "Adjust your search or filters and try again"
+      },
+      "values": {
+        "empty": "-"
+      },
+      "actions": {
+        "newAccount": "New Account",
+        "createFirst": "Create Account",
+        "edit": "Edit",
+        "delete": "Delete",
+        "cancel": "Cancel",
+        "deleting": "Deleting...",
+        "confirmDelete": "Delete"
+      },
+      "delete": {
+        "title": "Delete account?",
+        "description": "This action cannot be undone. The account will be permanently deleted."
+      },
+      "toasts": {
+        "deleteError": "Error deleting account",
+        "deleted": "Account successfully deleted"
+      }
+    },
+    "create": {
+      "title": "Create New Account",
+      "subtitle": "Add the company or partner details",
+      "actions": {
+        "back": "Back",
+        "cancel": "Cancel",
+        "create": "Create Account",
+        "creating": "Creating..."
+      },
+      "toasts": {
+        "created": "Account successfully created",
+        "createError": "Error creating account"
+      },
+      "sections": {
+        "basic": {
+          "title": "Basic Information"
+        },
+        "contact": {
+          "title": "Contact Information"
+        },
+        "billing": {
+          "title": "Billing Address"
+        },
+        "shipping": {
+          "title": "Shipping Address"
+        },
+        "additional": {
+          "title": "Additional Details"
+        }
+      },
+      "fields": {
+        "accountName": { "label": "Account Name *", "placeholder": "Bluewater Resorts" },
+        "accountType": { "label": "Account Type *" },
+        "relationshipStatus": { "label": "Relationship Status *" },
+        "industry": { "label": "Industry", "placeholder": "Hospitality" },
+        "website": { "label": "Website", "placeholder": "https://example.com" },
+        "annualRevenue": { "label": "Annual Revenue (€)", "placeholder": "2500000" },
+        "employeeCount": { "label": "Employee Count", "placeholder": "125" },
+        "email": { "label": "Email", "placeholder": "info@example.com" },
+        "phone": { "label": "Phone", "placeholder": "+1 555 123 4567" },
+        "billingAddress": { "label": "Address", "placeholder": "123 Main Street" },
+        "billingCity": { "label": "City", "placeholder": "Miami" },
+        "billingState": { "label": "State/Province", "placeholder": "Florida" },
+        "billingPostalCode": { "label": "Postal Code", "placeholder": "33101" },
+        "billingCountryCode": { "label": "Country" },
+        "shippingSameAsBilling": { "label": "Shipping address is the same as billing" },
+        "shippingAddress": { "label": "Address", "placeholder": "500 Warehouse Ave" },
+        "shippingCity": { "label": "City", "placeholder": "Orlando" },
+        "shippingState": { "label": "State/Province", "placeholder": "Florida" },
+        "shippingPostalCode": { "label": "Postal Code", "placeholder": "32801" },
+        "shippingCountryCode": { "label": "Country" },
+        "taxId": { "label": "Tax ID", "placeholder": "AB1234567" },
+        "notes": { "label": "Notes", "placeholder": "Important context about this account..." }
+      },
+      "countries": {
+        "ESP": "Spain",
+        "FRA": "France",
+        "PRT": "Portugal",
+        "USA": "United States",
+        "MEX": "Mexico"
+      },
+      "accountType": {
+        "customer": "Customer",
+        "prospect": "Prospect",
+        "partner": "Partner",
+        "supplier": "Supplier"
+      },
+      "relationshipStatus": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "prospect": "Prospect",
+        "partner": "Partner"
+      }
+    },
+    "edit": {
+      "title": "Edit Account",
+      "subtitle": "Update the account information",
+      "actions": {
+        "back": "Back",
+        "cancel": "Cancel",
+        "save": "Save Changes",
+        "saving": "Saving..."
+      },
+      "toasts": {
+        "updated": "Account successfully updated",
+        "updateError": "Error updating account"
+      },
+      "sections": {
+        "basic": {
+          "title": "Basic Information"
+        },
+        "contact": {
+          "title": "Contact Information"
+        },
+        "billing": {
+          "title": "Billing Address"
+        },
+        "shipping": {
+          "title": "Shipping Address"
+        },
+        "additional": {
+          "title": "Additional Details"
+        }
+      },
+      "fields": {
+        "accountName": { "label": "Account Name *", "placeholder": "Bluewater Resorts" },
+        "accountType": { "label": "Account Type *" },
+        "relationshipStatus": { "label": "Relationship Status *" },
+        "industry": { "label": "Industry", "placeholder": "Hospitality" },
+        "website": { "label": "Website", "placeholder": "https://example.com" },
+        "annualRevenue": { "label": "Annual Revenue (€)", "placeholder": "2500000" },
+        "employeeCount": { "label": "Employee Count", "placeholder": "125" },
+        "email": { "label": "Email", "placeholder": "info@example.com" },
+        "phone": { "label": "Phone", "placeholder": "+1 555 123 4567" },
+        "billingAddress": { "label": "Address", "placeholder": "123 Main Street" },
+        "billingCity": { "label": "City", "placeholder": "Miami" },
+        "billingState": { "label": "State/Province", "placeholder": "Florida" },
+        "billingPostalCode": { "label": "Postal Code", "placeholder": "33101" },
+        "billingCountryCode": { "label": "Country" },
+        "shippingSameAsBilling": { "label": "Shipping address is the same as billing" },
+        "shippingAddress": { "label": "Address", "placeholder": "500 Warehouse Ave" },
+        "shippingCity": { "label": "City", "placeholder": "Orlando" },
+        "shippingState": { "label": "State/Province", "placeholder": "Florida" },
+        "shippingPostalCode": { "label": "Postal Code", "placeholder": "32801" },
+        "shippingCountryCode": { "label": "Country" },
+        "taxId": { "label": "Tax ID", "placeholder": "AB1234567" },
+        "notes": { "label": "Notes", "placeholder": "Important context about this account..." }
+      },
+      "countries": {
+        "ESP": "Spain",
+        "FRA": "France",
+        "PRT": "Portugal",
+        "USA": "United States",
+        "MEX": "Mexico"
+      },
+      "accountType": {
+        "customer": "Customer",
+        "prospect": "Prospect",
+        "partner": "Partner",
+        "supplier": "Supplier"
+      },
+      "relationshipStatus": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "prospect": "Prospect",
+        "partner": "Partner"
+      }
+    }
   }
 }

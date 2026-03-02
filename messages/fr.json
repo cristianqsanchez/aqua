@@ -273,5 +273,225 @@
 
       }
     }
+  },
+  "accounts": {
+    "title": "Gérez les comptes clients et partenaires",
+    "subtitle": "Créez, mettez à jour et organisez votre portefeuille de comptes",
+    "list": {
+      "search": {
+        "placeholder": "Rechercher des comptes par nom, numéro, e-mail ou téléphone..."
+      },
+      "filters": {
+        "accountType": {
+          "label": "Type"
+        },
+        "relationshipStatus": {
+          "label": "Statut"
+        }
+      },
+      "stats": {
+        "total": "Total des comptes",
+        "activeCustomers": "Clients actifs",
+        "prospects": "Prospects",
+        "partners": "Partenaires"
+      },
+      "table": {
+        "number": "Numéro",
+        "name": "Nom",
+        "type": "Type",
+        "status": "Statut",
+        "industry": "Secteur",
+        "contact": "Contact",
+        "location": "Localisation",
+        "annualRevenue": "Chiffre d'affaires annuel",
+        "actions": "Actions"
+      },
+      "accountType": {
+        "customer": "Client",
+        "prospect": "Prospect",
+        "partner": "Partenaire",
+        "supplier": "Fournisseur"
+      },
+      "relationshipStatus": {
+        "active": "Actif",
+        "inactive": "Inactif",
+        "prospect": "Prospect",
+        "partner": "Partenaire"
+      },
+      "empty": {
+        "title": "Aucun compte pour le moment",
+        "subtitle": "Créez votre premier compte pour commencer à gérer vos relations",
+        "filteredTitle": "Aucun compte correspondant",
+        "filteredSubtitle": "Modifiez votre recherche ou vos filtres puis réessayez"
+      },
+      "values": {
+        "empty": "-"
+      },
+      "actions": {
+        "newAccount": "Nouveau compte",
+        "createFirst": "Créer un compte",
+        "edit": "Modifier",
+        "delete": "Supprimer",
+        "cancel": "Annuler",
+        "deleting": "Suppression...",
+        "confirmDelete": "Supprimer"
+      },
+      "delete": {
+        "title": "Supprimer le compte ?",
+        "description": "Cette action est irréversible. Le compte sera définitivement supprimé."
+      },
+      "toasts": {
+        "deleteError": "Erreur lors de la suppression du compte",
+        "deleted": "Compte supprimé avec succès"
+      }
+    },
+    "create": {
+      "title": "Créer un nouveau compte",
+      "subtitle": "Ajoutez les informations de l'entreprise ou du partenaire",
+      "actions": {
+        "back": "Retour",
+        "cancel": "Annuler",
+        "create": "Créer le compte",
+        "creating": "Création..."
+      },
+      "toasts": {
+        "created": "Compte créé avec succès",
+        "createError": "Erreur lors de la création du compte"
+      },
+      "sections": {
+        "basic": {
+          "title": "Informations de base"
+        },
+        "contact": {
+          "title": "Informations de contact"
+        },
+        "billing": {
+          "title": "Adresse de facturation"
+        },
+        "shipping": {
+          "title": "Adresse de livraison"
+        },
+        "additional": {
+          "title": "Détails supplémentaires"
+        }
+      },
+      "fields": {
+        "accountName": { "label": "Nom du compte *", "placeholder": "Bluewater Resorts" },
+        "accountType": { "label": "Type de compte *" },
+        "relationshipStatus": { "label": "Statut de la relation *" },
+        "industry": { "label": "Secteur", "placeholder": "Hôtellerie" },
+        "website": { "label": "Site web", "placeholder": "https://example.com" },
+        "annualRevenue": { "label": "Chiffre d'affaires annuel (€)", "placeholder": "2500000" },
+        "employeeCount": { "label": "Nombre d'employés", "placeholder": "125" },
+        "email": { "label": "E-mail", "placeholder": "info@example.com" },
+        "phone": { "label": "Téléphone", "placeholder": "+1 555 123 4567" },
+        "billingAddress": { "label": "Adresse", "placeholder": "123 Main Street" },
+        "billingCity": { "label": "Ville", "placeholder": "Miami" },
+        "billingState": { "label": "État/Province", "placeholder": "Floride" },
+        "billingPostalCode": { "label": "Code postal", "placeholder": "33101" },
+        "billingCountryCode": { "label": "Pays" },
+        "shippingSameAsBilling": { "label": "L'adresse de livraison est la même que l'adresse de facturation" },
+        "shippingAddress": { "label": "Adresse", "placeholder": "500 Warehouse Ave" },
+        "shippingCity": { "label": "Ville", "placeholder": "Orlando" },
+        "shippingState": { "label": "État/Province", "placeholder": "Floride" },
+        "shippingPostalCode": { "label": "Code postal", "placeholder": "32801" },
+        "shippingCountryCode": { "label": "Pays" },
+        "taxId": { "label": "Identifiant fiscal", "placeholder": "AB1234567" },
+        "notes": { "label": "Notes", "placeholder": "Contexte important sur ce compte..." }
+      },
+      "countries": {
+        "ESP": "Espagne",
+        "FRA": "France",
+        "PRT": "Portugal",
+        "USA": "États-Unis",
+        "MEX": "Mexique"
+      },
+      "accountType": {
+        "customer": "Client",
+        "prospect": "Prospect",
+        "partner": "Partenaire",
+        "supplier": "Fournisseur"
+      },
+      "relationshipStatus": {
+        "active": "Actif",
+        "inactive": "Inactif",
+        "prospect": "Prospect",
+        "partner": "Partenaire"
+      }
+    },
+    "edit": {
+      "title": "Modifier le compte",
+      "subtitle": "Mettez à jour les informations du compte",
+      "actions": {
+        "back": "Retour",
+        "cancel": "Annuler",
+        "save": "Enregistrer les modifications",
+        "saving": "Enregistrement..."
+      },
+      "toasts": {
+        "updated": "Compte mis à jour avec succès",
+        "updateError": "Erreur lors de la mise à jour du compte"
+      },
+      "sections": {
+        "basic": {
+          "title": "Informations de base"
+        },
+        "contact": {
+          "title": "Informations de contact"
+        },
+        "billing": {
+          "title": "Adresse de facturation"
+        },
+        "shipping": {
+          "title": "Adresse de livraison"
+        },
+        "additional": {
+          "title": "Détails supplémentaires"
+        }
+      },
+      "fields": {
+        "accountName": { "label": "Nom du compte *", "placeholder": "Bluewater Resorts" },
+        "accountType": { "label": "Type de compte *" },
+        "relationshipStatus": { "label": "Statut de la relation *" },
+        "industry": { "label": "Secteur", "placeholder": "Hôtellerie" },
+        "website": { "label": "Site web", "placeholder": "https://example.com" },
+        "annualRevenue": { "label": "Chiffre d'affaires annuel (€)", "placeholder": "2500000" },
+        "employeeCount": { "label": "Nombre d'employés", "placeholder": "125" },
+        "email": { "label": "E-mail", "placeholder": "info@example.com" },
+        "phone": { "label": "Téléphone", "placeholder": "+1 555 123 4567" },
+        "billingAddress": { "label": "Adresse", "placeholder": "123 Main Street" },
+        "billingCity": { "label": "Ville", "placeholder": "Miami" },
+        "billingState": { "label": "État/Province", "placeholder": "Floride" },
+        "billingPostalCode": { "label": "Code postal", "placeholder": "33101" },
+        "billingCountryCode": { "label": "Pays" },
+        "shippingSameAsBilling": { "label": "L'adresse de livraison est la même que l'adresse de facturation" },
+        "shippingAddress": { "label": "Adresse", "placeholder": "500 Warehouse Ave" },
+        "shippingCity": { "label": "Ville", "placeholder": "Orlando" },
+        "shippingState": { "label": "État/Province", "placeholder": "Floride" },
+        "shippingPostalCode": { "label": "Code postal", "placeholder": "32801" },
+        "shippingCountryCode": { "label": "Pays" },
+        "taxId": { "label": "Identifiant fiscal", "placeholder": "AB1234567" },
+        "notes": { "label": "Notes", "placeholder": "Contexte important sur ce compte..." }
+      },
+      "countries": {
+        "ESP": "Espagne",
+        "FRA": "France",
+        "PRT": "Portugal",
+        "USA": "États-Unis",
+        "MEX": "Mexique"
+      },
+      "accountType": {
+        "customer": "Client",
+        "prospect": "Prospect",
+        "partner": "Partenaire",
+        "supplier": "Fournisseur"
+      },
+      "relationshipStatus": {
+        "active": "Actif",
+        "inactive": "Inactif",
+        "prospect": "Prospect",
+        "partner": "Partenaire"
+      }
+    }
   }
 }
