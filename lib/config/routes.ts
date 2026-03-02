@@ -1,0 +1,27 @@
+export const protectedRoutes = [
+  'dashboard',
+  'crm',
+  'leads',
+  'accounts',
+  'opportunities',
+  'orders',
+  'projects',
+  'work-orders',
+  'invoicing',
+  'payments',
+  'finance',
+  'financial-calendar',
+  'overdue-control',
+  'costs',
+  'rates',
+  'post-sales-tickets',
+  'warranty-claims',
+  'maintenance-planning',
+  'insights',
+  'workflow',
+  'demos',
+  'settings',
+  'admin',
+]
+
+export const publicRoutes = ['login', 'error']
