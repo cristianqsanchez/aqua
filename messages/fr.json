@@ -4,14 +4,274 @@
     "systemDescription": "Système professionnel de gestion de l'eau",
     "loginTitle": "Bon retour",
     "loginSubtitle": "Entrez vos identifiants pour accéder à votre compte",
-    "emailLabel": "E-mail",
+    "emailLabel": "Adresse e-mail",
     "emailPlaceholder": "nom@exemple.com",
     "passwordLabel": "Mot de passe",
     "passwordPlaceholder": "Entrez votre mot de passe",
+
     "signingIn": "Connexion en cours...",
     "signInButton": "Se connecter",
     "noAccountText": "Vous n'avez pas de compte ?",
+
     "contactAdmin": "Contactez votre administrateur",
     "footerText": "© 2024 Aqua. Tous droits réservés."
+  },
+  "leads": {
+    "title": "Gérez les prospects, opportunités et devis",
+    "list": {
+      "search": {
+        "placeholder": "Rechercher des prospects par nom, e-mail, téléphone..."
+      },
+      "filters": {
+        "priority": "Priorité",
+        "customerType": "Type"
+      },
+      "stats": {
+        "total": "Total Prospects",
+        "qualified": "Qualifiés",
+        "highPriority": "Haute Priorité",
+        "estimatedValue": "Valeur Estimée"
+      },
+      "table": {
+        "number": "Numéro",
+        "name": "Nom / Entreprise",
+        "type": "Type",
+        "status": "Statut",
+        "priority": "Priorité",
+        "contact": "Contact",
+
+        "estimatedValue": "Valeur Estimée",
+        "closeDate": "Date de Clôture",
+
+        "actions": "Actions"
+      },
+      "customerType": {
+        "company": "Entreprise",
+        "individual": "Particulier"
+      },
+      "empty": {
+        "title": "Aucun prospect pour le moment",
+        "subtitle": "Commencez par créer votre premier prospect",
+        "filteredTitle": "Aucun prospect trouvé",
+        "filteredSubtitle": "Essayez d'ajuster les filtres ou la recherche"
+      },
+
+      "values": {
+
+        "empty": "-",
+        "noName": "Sans nom"
+      },
+      "actions": {
+
+        "newLead": "Nouveau Prospect",
+        "createFirst": "Créer un Prospect",
+        "edit": "Modifier",
+        "delete": "Supprimer",
+        "cancel": "Annuler",
+        "deleting": "Suppression...",
+        "confirmDelete": "Supprimer"
+      },
+      "delete": {
+        "title": "Supprimer le prospect ?",
+        "description": "Cette action est irréversible. Le prospect sera supprimé définitivement."
+      },
+      "toasts": {
+        "loadError": "Erreur lors du chargement des prospects",
+        "deleteError": "Erreur lors de la suppression du prospect",
+        "deleted": "Prospect supprimé avec succès"
+      },
+      "status": {
+        "new": "Nouveau",
+        "contacted": "Contacté",
+        "qualified": "Qualifié",
+        "unqualified": "Non qualifié"
+      },
+      "priority": {
+        "high": "Haute",
+        "medium": "Moyenne",
+        "low": "Basse"
+      }
+    },
+    "create": {
+      "title": "Créer un Nouveau Prospect",
+      "subtitle": "Complétez les informations du prospect",
+      "actions": {
+        "back": "Retour",
+        "cancel": "Annuler",
+        "create": "Créer le Prospect",
+        "creating": "Création..."
+      },
+      "errors": {
+        "tenantNotConfigured": "ID du tenant non configuré"
+      },
+      "toasts": {
+        "created": "Prospect créé avec succès",
+        "createError": "Erreur lors de la création du prospect"
+      },
+
+      "sections": {
+        "customerType": {
+          "title": "Type de Client",
+          "company": "Entreprise",
+          "individual": "Particulier"
+        },
+        "identity": {
+          "companyTitle": "Informations de l’Entreprise",
+          "individualTitle": "Informations Personnelles"
+        },
+        "contact": {
+          "title": "Informations de Contact"
+        },
+        "address": {
+          "title": "Adresse"
+        },
+        "sales": {
+          "title": "Informations Commerciales"
+        }
+      },
+      "fields": {
+        "companyName": { "label": "Nom de l’Entreprise *", "placeholder": "Hotel Paradise Resort" },
+        "industry": { "label": "Secteur", "placeholder": "Hôtellerie" },
+        "website": { "label": "Site Web", "placeholder": "https://example.com" },
+        "firstName": { "label": "Prénom *", "placeholder": "Marie" },
+        "lastName": { "label": "Nom *", "placeholder": "Gonzalez" },
+        "contactName": { "label": "Nom du Contact", "placeholder": "Jean Dupont" },
+        "email": { "label": "E-mail *", "placeholder": "contact@exemple.com" },
+        "phone": { "label": "Téléphone", "placeholder": "+33 1 23 45 67 89" },
+        "mobile": { "label": "Mobile", "placeholder": "+33 6 12 34 56 78" },
+        "address": { "label": "Adresse", "placeholder": "123 Rue Principale" },
+
+        "city": { "label": "Ville", "placeholder": "Paris" },
+        "state": { "label": "Région/État", "placeholder": "Île-de-France" },
+        "postalCode": { "label": "Code Postal", "placeholder": "75001" },
+        "countryCode": { "label": "Pays" },
+        "status": { "label": "Statut *" },
+        "priority": { "label": "Priorité *" },
+        "source": { "label": "Origine", "placeholder": "Sélectionner..." },
+        "interest": { "label": "Intérêt / Besoin", "placeholder": "Ex : Construction d'une piscine 8x4m" },
+
+        "estimatedValue": { "label": "Valeur Estimée (€)", "placeholder": "35000" },
+        "estimatedCloseDate": { "label": "Date Estimée de Clôture" },
+        "notes": { "label": "Notes", "placeholder": "Informations supplémentaires sur le prospect..." }
+      },
+      "countries": {
+        "ESP": "Espagne",
+        "FRA": "France",
+        "PRT": "Portugal",
+        "USA": "États-Unis",
+        "MEX": "Mexique"
+      },
+      "status": {
+        "new": "Nouveau",
+        "contacted": "Contacté",
+        "qualified": "Qualifié",
+        "unqualified": "Non qualifié"
+      },
+      "priority": {
+        "low": "Basse",
+        "medium": "Moyenne",
+
+        "high": "Haute"
+
+      },
+      "source": {
+        "website": "Site Web",
+        "referral": "Référence",
+        "cold_call": "Appel à Froid",
+        "social_media": "Réseaux Sociaux",
+        "advertisement": "Publicité",
+        "other": "Autre"
+      }
+    },
+    "edit": {
+      "title": "Modifier le Prospect",
+      "subtitle": "Mettre à jour les informations du prospect",
+      "actions": {
+        "back": "Retour",
+        "cancel": "Annuler",
+        "save": "Enregistrer les Modifications",
+        "saving": "Enregistrement..."
+      },
+      "toasts": {
+        "updated": "Prospect mis à jour avec succès",
+        "updateError": "Erreur lors de la mise à jour du prospect",
+        "loadError": "Erreur lors du chargement du prospect",
+        "notFound": "Prospect non trouvé"
+      },
+      "sections": {
+        "customerType": {
+          "title": "Type de Client",
+          "company": "Entreprise",
+          "individual": "Particulier"
+        },
+        "identity": {
+          "companyTitle": "Informations de l’Entreprise",
+          "individualTitle": "Informations Personnelles"
+        },
+
+        "contact": {
+          "title": "Informations de Contact"
+        },
+        "address": {
+          "title": "Adresse"
+        },
+        "sales": {
+          "title": "Informations Commerciales"
+        }
+      },
+      "fields": {
+        "companyName": { "label": "Nom de l’Entreprise *", "placeholder": "Hotel Paradise Resort" },
+        "industry": { "label": "Secteur", "placeholder": "Hôtellerie" },
+
+        "website": { "label": "Site Web", "placeholder": "https://example.com" },
+        "firstName": { "label": "Prénom *", "placeholder": "Marie" },
+        "lastName": { "label": "Nom *", "placeholder": "Gonzalez" },
+        "contactName": { "label": "Nom du Contact", "placeholder": "Jean Dupont" },
+        "email": { "label": "E-mail *", "placeholder": "contact@exemple.com" },
+        "phone": { "label": "Téléphone", "placeholder": "+33 1 23 45 67 89" },
+        "mobile": { "label": "Mobile", "placeholder": "+33 6 12 34 56 78" },
+        "address": { "label": "Adresse", "placeholder": "123 Rue Principale" },
+        "city": { "label": "Ville", "placeholder": "Paris" },
+        "state": { "label": "Région/État", "placeholder": "Île-de-France" },
+        "postalCode": { "label": "Code Postal", "placeholder": "75001" },
+        "countryCode": { "label": "Pays" },
+
+        "status": { "label": "Statut *" },
+        "priority": { "label": "Priorité *" },
+        "source": { "label": "Origine", "placeholder": "Sélectionner..." },
+        "interest": { "label": "Intérêt / Besoin", "placeholder": "Ex : Construction d'une piscine 8x4m" },
+        "estimatedValue": { "label": "Valeur Estimée (€)", "placeholder": "35000" },
+        "estimatedCloseDate": { "label": "Date Estimée de Clôture" },
+        "notes": { "label": "Notes", "placeholder": "Informations supplémentaires sur le prospect..." }
+      },
+      "countries": {
+        "ESP": "Espagne",
+
+        "FRA": "France",
+        "PRT": "Portugal",
+        "USA": "États-Unis",
+        "MEX": "Mexique"
+      },
+      "status": {
+        "new": "Nouveau",
+        "contacted": "Contacté",
+        "qualified": "Qualifié",
+        "unqualified": "Non qualifié"
+      },
+      "priority": {
+        "low": "Basse",
+        "medium": "Moyenne",
+        "high": "Haute"
+      },
+      "source": {
+        "website": "Site Web",
+        "referral": "Référence",
+        "cold_call": "Appel à Froid",
+        "social_media": "Réseaux Sociaux",
+        "advertisement": "Publicité",
+        "other": "Autre"
+
+      }
+    }
   }
 }

@@ -13,5 +13,253 @@
     "noAccountText": "¿No tienes una cuenta?",
     "contactAdmin": "Contacta a tu administrador",
     "footerText": "© 2024 Aqua. Todos los derechos reservados."
+  },
+  "leads": {
+    "title": "Leads",
+    "subtitle": "Gestiona leads, oportunidades y cotizaciones",
+    "list": {
+      "search": {
+        "placeholder": "Buscar leads por nombre, email, teléfono..."
+      },
+      "filters": {
+        "priority": "Prioridad",
+        "customerType": "Tipo"
+      },
+      "stats": {
+        "total": "Total Leads",
+        "qualified": "Cualificados",
+        "highPriority": "Alta Prioridad",
+        "estimatedValue": "Valor Estimado"
+      },
+      "table": {
+        "number": "Número",
+        "name": "Nombre / Empresa",
+        "type": "Tipo",
+        "status": "Estado",
+        "priority": "Prioridad",
+        "contact": "Contacto",
+        "estimatedValue": "Valor Estimado",
+        "closeDate": "Fecha Cierre",
+        "actions": "Acciones"
+      },
+      "customerType": {
+        "company": "Empresa",
+        "individual": "Individual"
+      },
+      "empty": {
+        "title": "No hay leads todavía",
+        "subtitle": "Comienza creando tu primer lead",
+        "filteredTitle": "No se encontraron leads",
+        "filteredSubtitle": "Intenta ajustar los filtros o la búsqueda"
+      },
+      "values": {
+        "empty": "-",
+        "noName": "Sin nombre"
+      },
+      "actions": {
+        "newLead": "Nuevo Lead",
+        "createFirst": "Crear Lead",
+        "edit": "Editar",
+        "delete": "Eliminar",
+        "cancel": "Cancelar",
+        "deleting": "Eliminando...",
+        "confirmDelete": "Eliminar"
+      },
+      "delete": {
+        "title": "¿Eliminar lead?",
+        "description": "Esta acción no se puede deshacer. El lead será eliminado permanentemente."
+      },
+      "toasts": {
+        "loadError": "Error al cargar leads",
+        "deleteError": "Error al eliminar lead",
+        "deleted": "Lead eliminado correctamente"
+      },
+      "status": {
+        "new": "Nuevo",
+        "contacted": "Contactado",
+        "qualified": "Cualificado",
+        "unqualified": "No cualificado"
+      },
+      "priority": {
+        "high": "Alta",
+        "medium": "Media",
+        "low": "Baja"
+      },
+      "customerType": {
+        "company": "Empresa",
+        "individual": "Individual"
+      }
+    },
+    "create": {
+      "title": "Crear Nuevo Lead",
+      "subtitle": "Completa la información del prospecto",
+      "actions": {
+        "back": "Volver",
+        "cancel": "Cancelar",
+        "create": "Crear Lead",
+        "creating": "Creando..."
+      },
+      "errors": {
+        "tenantNotConfigured": "Tenant ID no configurado"
+      },
+      "toasts": {
+        "created": "Lead creado correctamente",
+        "createError": "Error al crear lead"
+      },
+      "sections": {
+        "customerType": {
+          "title": "Tipo de Cliente",
+          "company": "Empresa",
+          "individual": "Individual"
+        },
+        "identity": {
+          "companyTitle": "Información de la Empresa",
+          "individualTitle": "Información Personal"
+        },
+        "contact": {
+          "title": "Información de Contacto"
+        },
+        "address": {
+          "title": "Dirección"
+        },
+        "sales": {
+          "title": "Información de Ventas"
+        }
+      },
+      "fields": {
+        "companyName": { "label": "Nombre de Empresa *", "placeholder": "Hotel Paradise Resort" },
+        "industry": { "label": "Industria", "placeholder": "Hospitalidad" },
+        "website": { "label": "Sitio Web", "placeholder": "https://example.com" },
+        "firstName": { "label": "Nombre *", "placeholder": "María" },
+        "lastName": { "label": "Apellidos *", "placeholder": "González" },
+        "contactName": { "label": "Nombre de Contacto", "placeholder": "Juan Pérez" },
+        "email": { "label": "Email *", "placeholder": "contacto@ejemplo.com" },
+        "phone": { "label": "Teléfono", "placeholder": "+34 912 345 678" },
+        "mobile": { "label": "Móvil", "placeholder": "+34 655 123 456" },
+        "address": { "label": "Dirección", "placeholder": "Calle Principal 123" },
+        "city": { "label": "Ciudad", "placeholder": "Madrid" },
+        "state": { "label": "Provincia/Estado", "placeholder": "Madrid" },
+        "postalCode": { "label": "Código Postal", "placeholder": "28001" },
+        "countryCode": { "label": "País" },
+        "status": { "label": "Estado *" },
+        "priority": { "label": "Prioridad *" },
+        "source": { "label": "Origen", "placeholder": "Seleccionar..." },
+        "interest": { "label": "Interés / Necesidad", "placeholder": "Ej: Construcción de piscina 8x4m" },
+        "estimatedValue": { "label": "Valor Estimado (€)", "placeholder": "35000" },
+        "estimatedCloseDate": { "label": "Fecha Estimada de Cierre" },
+        "notes": { "label": "Notas", "placeholder": "Información adicional sobre el lead..." }
+      },
+      "countries": {
+        "ESP": "España",
+        "FRA": "Francia",
+        "PRT": "Portugal",
+        "USA": "Estados Unidos",
+        "MEX": "México"
+      },
+      "status": {
+        "new": "Nuevo",
+        "contacted": "Contactado",
+        "qualified": "Cualificado",
+        "unqualified": "No cualificado"
+      },
+      "priority": {
+        "low": "Baja",
+        "medium": "Media",
+        "high": "Alta"
+      },
+      "source": {
+        "website": "Sitio Web",
+        "referral": "Referencia",
+        "cold_call": "Llamada Fría",
+        "social_media": "Redes Sociales",
+        "advertisement": "Publicidad",
+        "other": "Otro"
+      }
+    },
+    "edit": {
+      "title": "Editar Lead",
+      "subtitle": "Actualiza la información del prospecto",
+      "actions": {
+        "back": "Volver",
+        "cancel": "Cancelar",
+        "save": "Guardar Cambios",
+        "saving": "Guardando..."
+      },
+      "toasts": {
+        "updated": "Lead actualizado correctamente",
+        "updateError": "Error al actualizar lead",
+        "loadError": "Error al cargar lead",
+        "notFound": "Lead no encontrado"
+      },
+      "sections": {
+        "customerType": {
+          "title": "Tipo de Cliente",
+          "company": "Empresa",
+          "individual": "Individual"
+        },
+        "identity": {
+          "companyTitle": "Información de la Empresa",
+          "individualTitle": "Información Personal"
+        },
+        "contact": {
+          "title": "Información de Contacto"
+        },
+        "address": {
+          "title": "Dirección"
+        },
+        "sales": {
+          "title": "Información de Ventas"
+        }
+      },
+      "fields": {
+        "companyName": { "label": "Nombre de Empresa *", "placeholder": "Hotel Paradise Resort" },
+        "industry": { "label": "Industria", "placeholder": "Hospitalidad" },
+        "website": { "label": "Sitio Web", "placeholder": "https://example.com" },
+        "firstName": { "label": "Nombre *", "placeholder": "María" },
+        "lastName": { "label": "Apellidos *", "placeholder": "González" },
+        "contactName": { "label": "Nombre de Contacto", "placeholder": "Juan Pérez" },
+        "email": { "label": "Email *", "placeholder": "contacto@ejemplo.com" },
+        "phone": { "label": "Teléfono", "placeholder": "+34 912 345 678" },
+        "mobile": { "label": "Móvil", "placeholder": "+34 655 123 456" },
+        "address": { "label": "Dirección", "placeholder": "Calle Principal 123" },
+        "city": { "label": "Ciudad", "placeholder": "Madrid" },
+        "state": { "label": "Provincia/Estado", "placeholder": "Madrid" },
+        "postalCode": { "label": "Código Postal", "placeholder": "28001" },
+        "countryCode": { "label": "País" },
+        "status": { "label": "Estado *" },
+        "priority": { "label": "Prioridad *" },
+        "source": { "label": "Origen", "placeholder": "Seleccionar..." },
+        "interest": { "label": "Interés / Necesidad", "placeholder": "Ej: Construcción de piscina 8x4m" },
+        "estimatedValue": { "label": "Valor Estimado (€)", "placeholder": "35000" },
+        "estimatedCloseDate": { "label": "Fecha Estimada de Cierre" },
+        "notes": { "label": "Notas", "placeholder": "Información adicional sobre el lead..." }
+      },
+      "countries": {
+        "ESP": "España",
+        "FRA": "Francia",
+        "PRT": "Portugal",
+        "USA": "Estados Unidos",
+        "MEX": "México"
+      },
+      "status": {
+        "new": "Nuevo",
+        "contacted": "Contactado",
+        "qualified": "Cualificado",
+        "unqualified": "No cualificado"
+      },
+      "priority": {
+        "low": "Baja",
+        "medium": "Media",
+        "high": "Alta"
+      },
+      "source": {
+        "website": "Sitio Web",
+        "referral": "Referencia",
+        "cold_call": "Llamada Fría",
+        "social_media": "Redes Sociales",
+        "advertisement": "Publicidad",
+        "other": "Otro"
+      }
+    }
   }
 }
