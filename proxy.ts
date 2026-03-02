@@ -3,11 +3,9 @@ import createMiddleware from 'next-intl/middleware'
 import { updateSession } from '@/lib/supabase/proxy'
 import { routing } from './i18n/routing'
 import { defaultLocale, locales } from './i18n/config'
+import { protectedRoutes, publicRoutes } from './lib/config/routes'
 
 const handleI18n = createMiddleware(routing)
-
-const PUBLIC_ROUTES = ['login', 'error']
-const PROTECTED_ROUTES = ['dashboard', 'sales', 'leads', 'orders', 'settings']
 
 function getLocaleFromPath(pathname: string): string {
   const segments = pathname.split('/').filter(Boolean)
@@ -29,12 +27,12 @@ function getPathWithoutLocale(pathname: string): string {
 
 function isPublicRoute(path: string): boolean {
   const cleanPath = path === '/' ? path : path.replace(/\/$/, '')
-  return PUBLIC_ROUTES.some(route => cleanPath === `/${route}`)
+  return publicRoutes.some((route: string) => cleanPath === `/${route}`)
 }
 
 function isProtectedRoute(path: string): boolean {
   const cleanPath = path === '/' ? path : path.replace(/\/$/, '')
-  return PROTECTED_ROUTES.some(route => cleanPath.startsWith(`/${route}`))
+  return protectedRoutes.some((route: string) => cleanPath.startsWith(`/${route}`))
 }
 
 export async function proxy(request: NextRequest) {
