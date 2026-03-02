@@ -38,6 +38,13 @@ function isProtectedRoute(path: string): boolean {
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
+  // Handle root path - redirect based on auth status
+  if (pathname === '/') {
+    const { user } = await updateSession(request)
+    const destination = user ? `/${defaultLocale}/dashboard` : `/${defaultLocale}/login`
+    return NextResponse.redirect(new URL(destination, request.url))
+  }
+
   const i18nResponse = handleI18n(request)
 
   if (i18nResponse.status === 404) {
