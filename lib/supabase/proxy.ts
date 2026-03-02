@@ -1,8 +1,6 @@
 import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
-console.log(process.env.NEXT_PUBLIC_SUPABASE_URL)
-console.log(process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY)
 export async function updateSession(request: NextRequest) {
   let supabaseResponse = NextResponse.next({
     request,
@@ -25,14 +23,11 @@ export async function updateSession(request: NextRequest) {
             supabaseResponse.cookies.set(name, value, options)
           )
         },
-
       },
     }
   )
 
-  // refreshing the auth token
+  const { data: { user } } = await supabase.auth.getUser()
 
-  await supabase.auth.getUser()
-
-  return supabaseResponse
+  return { response: supabaseResponse, user }
 }
