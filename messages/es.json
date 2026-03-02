@@ -1,0 +1,17 @@
+{
+  "auth": {
+    "systemName": "Aqua",
+    "systemDescription": "Sistema profesional de gestión de agua",
+    "loginTitle": "Bienvenido de nuevo",
+    "loginSubtitle": "Ingresa tus credenciales para acceder a tu cuenta",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "nombre@ejemplo.com",
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "Ingresa tu contraseña",
+    "signingIn": "Iniciando sesión...",
+    "signInButton": "Iniciar sesión",
+    "noAccountText": "¿No tienes una cuenta?",
+    "contactAdmin": "Contacta a tu administrador",
+    "footerText": "© 2024 Aqua. Todos los derechos reservados."
+  }
+}

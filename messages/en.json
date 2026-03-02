@@ -1,0 +1,17 @@
+{
+  "auth": {
+    "systemName": "Aqua",
+    "systemDescription": "Professional water management system",
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Enter your credentials to access your account",
+    "emailLabel": "Email",
+    "emailPlaceholder": "name@example.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "signingIn": "Signing in...",
+    "signInButton": "Sign in",
+    "noAccountText": "Don't have an account?",
+    "contactAdmin": "Contact your administrator",
+    "footerText": "© 2024 Aqua. All rights reserved."
+  }
+}
