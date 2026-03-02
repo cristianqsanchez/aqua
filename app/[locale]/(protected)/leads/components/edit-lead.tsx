@@ -5,7 +5,6 @@ import { ArrowLeft, Building2, User } from 'lucide-react';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
 
-import { createClient } from '@/lib/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -14,19 +13,18 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { getLead, updateLead } from '../actions'
 
 interface EditLeadProps {
   leadId: string;
-
   onBack: () => void;
+  onSuccess: () => void;
 }
 
-const TENANT_ID = '10d50f3f-b1b6-4230-b229-37bec3e39ada';
-
-export function EditLead({ leadId, onBack }: EditLeadProps) {
-  const t = useTranslations('leads.edit');
-  const [loading, setLoading] = useState(false);
-  const [loadingData, setLoadingData] = useState(true);
+export function EditLead({ leadId, onBack, onSuccess }: EditLeadProps) {
+  const t = useTranslations('leads.edit')
+  const [loading, setLoading] = useState(false)
+  const [loadingData, setLoadingData] = useState(true)
   const [formData, setFormData] = useState({
     customerType: 'company' as 'individual' | 'company',
     status: 'new',
@@ -57,176 +55,114 @@ export function EditLead({ leadId, onBack }: EditLeadProps) {
     estimatedCloseDate: '',
 
     notes: '',
-  });
+  })
 
 
   useEffect(() => {
-    let active = true;
-
+    let active = true
 
     const load = async () => {
-      const supabase = createClient();
-
       try {
-        setLoadingData(true);
+        setLoadingData(true)
+        const lead = await getLead(leadId)
 
-        const { data, error } = await supabase
-          .from('leads')
-          .select(
-            [
-              'id',
-              'tenant_id',
-              'customer_type',
-              'status',
-              'source',
-              'priority',
-              'company_name',
-              'industry',
-              'website',
-              'first_name',
-              'last_name',
-              'contact_name',
-              'email',
-              'phone',
-              'mobile',
-
-              'address',
-              'city',
-              'state',
-              'postal_code',
-              'country_code',
-              'interest',
-              'estimated_value',
-              'estimated_close_date',
-              'notes',
-
-            ].join(',')
-          )
-          .eq('id', leadId)
-          .eq('tenant_id', TENANT_ID)
-          .maybeSingle();
-
-        if (error) throw error;
-
-        if (!data) {
-          toast.error(t('toasts.notFound'));
-
-          onBack();
-          return;
+        if (!lead) {
+          toast.error(t('toasts.notFound'))
+          onBack()
+          return
         }
 
-        if (!active) return;
+        if (!active) return
 
         setFormData({
-          customerType: (data.customer_type as 'company' | 'individual') || 'company',
-          status: data.status || 'new',
-          source: data.source || '',
-          priority: data.priority || 'medium',
+          customerType: (lead.customer_type as 'company' | 'individual') || 'company',
+          status: lead.status || 'new',
+          source: lead.source || '',
+          priority: lead.priority || 'medium',
 
-          companyName: data.company_name || '',
-          industry: data.industry || '',
-          website: data.website || '',
+          companyName: lead.company_name || '',
+          industry: lead.industry || '',
+          website: lead.website || '',
 
-          firstName: data.first_name || '',
-          lastName: data.last_name || '',
+          firstName: lead.first_name || '',
+          lastName: lead.last_name || '',
 
+          contactName: lead.contact_name || '',
+          email: lead.email || '',
+          phone: lead.phone || '',
+          mobile: lead.mobile || '',
 
-          contactName: data.contact_name || '',
-          email: data.email || '',
-          phone: data.phone || '',
-          mobile: data.mobile || '',
+          address: lead.address || '',
+          city: lead.city || '',
+          state: lead.state || '',
+          postalCode: lead.postal_code || '',
+          countryCode: lead.country_code || 'ESP',
 
-          address: data.address || '',
-          city: data.city || '',
-          state: data.state || '',
-          postalCode: data.postal_code || '',
-          countryCode: data.country_code || 'ESP',
+          interest: lead.interest || '',
+          estimatedValue: lead.estimated_value != null ? String(lead.estimated_value) : '',
+          estimatedCloseDate: lead.estimated_close_date || '',
 
-
-          interest: data.interest || '',
-          estimatedValue: data.estimated_value != null ? String(data.estimated_value) : '',
-          estimatedCloseDate: data.estimated_close_date || '',
-
-          notes: data.notes || '',
-        });
+          notes: lead.notes || '',
+        })
       } catch (error) {
-        console.error('Error loading lead:', error);
-        toast.error(t('toasts.loadError'));
+        console.error('Error loading lead:', error)
+        toast.error(t('toasts.loadError'))
       } finally {
-        if (active) setLoadingData(false);
+        if (active) setLoadingData(false)
       }
-    };
+    }
 
-    load();
+    load()
 
     return () => {
-      active = false;
-    };
-  }, [leadId, onBack, t]);
+      active = false
+    }
+  }, [leadId, onBack, t])
 
   const handleChange = (field: keyof typeof formData, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-  };
+    setFormData((prev) => ({ ...prev, [field]: value }))
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const supabase = createClient();
+    e.preventDefault()
 
     try {
-      setLoading(true);
+      setLoading(true)
 
-      const payload = {
-        customer_type: formData.customerType,
-        status: formData.status,
-        source: formData.source || null,
-        priority: formData.priority,
+      const form = new FormData()
+      form.append('customer_type', formData.customerType)
+      form.append('status', formData.status)
+      form.append('source', formData.source)
+      form.append('priority', formData.priority)
+      form.append('company_name', formData.customerType === 'company' ? formData.companyName : '')
+      form.append('industry', formData.customerType === 'company' ? formData.industry : '')
+      form.append('website', formData.customerType === 'company' ? formData.website : '')
+      form.append('first_name', formData.customerType === 'individual' ? formData.firstName : '')
+      form.append('last_name', formData.customerType === 'individual' ? formData.lastName : '')
+      form.append('contact_name', formData.contactName)
+      form.append('email', formData.email)
+      form.append('phone', formData.phone)
+      form.append('mobile', formData.mobile)
+      form.append('address', formData.address)
+      form.append('city', formData.city)
+      form.append('state', formData.state)
+      form.append('postal_code', formData.postalCode)
+      form.append('country_code', formData.countryCode)
+      form.append('interest', formData.interest)
+      form.append('estimated_value', formData.estimatedValue)
+      form.append('estimated_close_date', formData.estimatedCloseDate)
+      form.append('notes', formData.notes)
 
-        company_name: formData.customerType === 'company' ? formData.companyName : null,
-        industry: formData.customerType === 'company' ? formData.industry || null : null,
-        website: formData.customerType === 'company' ? formData.website || null : null,
-
-        first_name: formData.customerType === 'individual' ? formData.firstName : null,
-        last_name: formData.customerType === 'individual' ? formData.lastName : null,
-
-        contact_name: formData.contactName || null,
-        email: formData.email || null,
-        phone: formData.phone || null,
-        mobile: formData.mobile || null,
-
-        address: formData.address || null,
-        city: formData.city || null,
-        state: formData.state || null,
-        postal_code: formData.postalCode || null,
-        country_code: formData.countryCode || null,
-
-
-        interest: formData.interest || null,
-        estimated_value: formData.estimatedValue ? Number.parseFloat(formData.estimatedValue) : null,
-        estimated_close_date: formData.estimatedCloseDate || null,
-
-        notes: formData.notes || null,
-      };
-
-
-      const { error } = await supabase
-        .from('leads')
-        .update(payload)
-        .eq('id', leadId)
-        .eq('tenant_id', TENANT_ID);
-
-      if (error) throw error;
-
-
-      toast.success(t('toasts.updated'));
-      onBack();
+      await updateLead(leadId, form)
+      toast.success(t('toasts.updated'))
+      onSuccess()
     } catch (error) {
-      console.error('Error updating lead:', error);
-      toast.error(t('toasts.updateError'));
+      console.error('Error updating lead:', error)
+      toast.error(t('toasts.updateError'))
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   if (loadingData) {
     return (

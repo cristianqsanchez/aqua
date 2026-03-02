@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import {
   Plus,
   Search,
@@ -17,7 +17,6 @@ import {
 } from 'lucide-react';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
-import { createClient } from '@/lib/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -33,67 +32,31 @@ import {
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { FiltersPopover } from '@/components/ui/filters-popover';
-
-interface Lead {
-  id: string;
-  lead_number: string;
-  tenant_id: string;
-  customer_type: 'individual' | 'company';
-  status: 'new' | 'contacted' | 'qualified' | 'unqualified';
-  source?: string | null;
-  company_name?: string | null;
-  first_name?: string | null;
-  last_name?: string | null;
-  contact_name?: string | null;
-  email?: string | null;
-  phone?: string | null;
-
-  mobile?: string | null;
-  address?: string | null;
-  city?: string | null;
-  state?: string | null;
-  postal_code?: string | null;
-  country_code?: string | null;
-  interest?: string | null;
-  estimated_value?: number | null;
-  estimated_close_date?: string | null;
-  priority: 'low' | 'medium' | 'high';
-  notes?: string | null;
-  tags?: string[] | null;
-  assigned_to?: string | null;
-  created_by?: string | null;
-
-  created_at: string;
-  updated_at?: string | null;
-}
+import type { Lead } from '../actions'
+import { deleteLead } from '../actions'
 
 interface LeadsListProps {
+  leads: Lead[]
   onCreateLead: () => void;
   onEditLead: (id: string) => void;
-
+  onLeadDeleted: (id: string) => void;
 }
 
 
-const TENANT_ID = '10d50f3f-b1b6-4230-b229-37bec3e39ada';
+export function LeadsList({ leads: initialLeads, onCreateLead, onEditLead, onLeadDeleted }: LeadsListProps) {
+  const t = useTranslations('leads.list')
+  const tc = useTranslations('common')
 
-
-export function LeadsList({ onCreateLead, onEditLead }: LeadsListProps) {
-  const t = useTranslations('leads.list');
-  const tc = useTranslations('common');
-
-
-  const [leads, setLeads] = useState<Lead[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-  const [leadToDelete, setLeadToDelete] = useState<string | null>(null);
-  const [deleting, setDeleting] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [leads] = useState<Lead[]>(initialLeads)
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
+  const [leadToDelete, setLeadToDelete] = useState<string | null>(null)
+  const [deleting, setDeleting] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
   const [filters, setFilters] = useState<Record<string, string>>({
     status: 'all',
     priority: 'all',
     customer_type: 'all',
-  });
+  })
 
   const filterOptions = useMemo(
     () => [
@@ -133,99 +96,23 @@ export function LeadsList({ onCreateLead, onEditLead }: LeadsListProps) {
     [t, tc]
   );
 
-  useEffect(() => {
-
-    let active = true;
-
-    const load = async () => {
-      const supabase = createClient();
-
-
-      try {
-        setLoading(true);
-
-        const { data, error } = await supabase
-          .from('leads')
-          .select(
-            [
-              'id',
-              'lead_number',
-              'tenant_id',
-              'customer_type',
-              'status',
-              'source',
-              'company_name',
-              'first_name',
-              'last_name',
-              'contact_name',
-
-              'email',
-              'phone',
-              'mobile',
-              'interest',
-
-              'estimated_value',
-              'estimated_close_date',
-              'priority',
-              'created_at',
-              'updated_at',
-            ].join(',')
-          )
-          .eq('tenant_id', TENANT_ID)
-          .order('created_at', { ascending: false });
-
-
-        if (error) throw error;
-
-        if (!active) return;
-        setLeads((data as Lead[]) || []);
-      } catch (error) {
-        console.error('Error loading leads:', error);
-        toast.error(t('toasts.loadError'));
-      } finally {
-
-        if (active) setLoading(false);
-      }
-    };
-
-    load();
-
-    return () => {
-      active = false;
-    };
-  }, [t]);
-
   const handleDelete = async () => {
-    if (!leadToDelete) return;
-
-    const supabase = createClient();
-
+    if (!leadToDelete) return
 
     try {
-      setDeleting(true);
-
-      const { error } = await supabase
-        .from('leads')
-        .delete()
-        .eq('id', leadToDelete)
-
-        .eq('tenant_id', TENANT_ID);
-
-      if (error) throw error;
-
-
-      setLeads((prev) => prev.filter((l) => l.id !== leadToDelete));
-      toast.success(t('toasts.deleted'));
-
-      setDeleteDialogOpen(false);
-      setLeadToDelete(null);
+      setDeleting(true)
+      await deleteLead(leadToDelete)
+      onLeadDeleted(leadToDelete)
+      toast.success(t('toasts.deleted'))
+      setDeleteDialogOpen(false)
+      setLeadToDelete(null)
     } catch (error) {
-      console.error('Error deleting lead:', error);
-      toast.error(t('toasts.deleteError'));
+      console.error('Error deleting lead:', error)
+      toast.error(t('toasts.deleteError'))
     } finally {
-      setDeleting(false);
+      setDeleting(false)
     }
-  };
+  }
 
   const openDeleteDialog = (id: string) => {
     setLeadToDelete(id);
@@ -274,7 +161,7 @@ export function LeadsList({ onCreateLead, onEditLead }: LeadsListProps) {
 
   const getStatusBadgeVariant = (
     status: string
-  ): 'default' | 'secondary' | 'success' | 'warning' | 'destructive' => {
+  ): 'default' | 'secondary' | 'destructive' | 'outline' => {
 
     switch (status) {
       case 'new':
@@ -284,7 +171,7 @@ export function LeadsList({ onCreateLead, onEditLead }: LeadsListProps) {
         return 'secondary';
       case 'qualified':
 
-        return 'success';
+        return 'outline';
       case 'unqualified':
         return 'destructive';
       default:
@@ -294,12 +181,12 @@ export function LeadsList({ onCreateLead, onEditLead }: LeadsListProps) {
   };
 
 
-  const getPriorityBadgeVariant = (priority: string): 'default' | 'warning' | 'destructive' => {
+  const getPriorityBadgeVariant = (priority: string): 'default' | 'destructive' | 'secondary' => {
     switch (priority) {
       case 'high':
         return 'destructive';
       case 'medium':
-        return 'warning';
+        return 'secondary';
 
       case 'low':
         return 'default';
@@ -324,18 +211,9 @@ export function LeadsList({ onCreateLead, onEditLead }: LeadsListProps) {
     if (lead.customer_type === 'company' && lead.company_name) return lead.company_name;
     if (lead.first_name || lead.last_name) return `${lead.first_name || ''} ${lead.last_name || ''}`.trim();
     return lead.contact_name || t('values.noName');
-  };
-
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
-      </div>
-    );
   }
 
-  const isFiltering = searchQuery.trim() || Object.values(filters).some((f) => f !== 'all');
+  const isFiltering = searchQuery.trim() || Object.values(filters).some((f) => f !== 'all')
 
   const totalEstimatedValue = leads.reduce((sum, l) => sum + (l.estimated_value || 0), 0);
 
@@ -352,12 +230,6 @@ export function LeadsList({ onCreateLead, onEditLead }: LeadsListProps) {
           />
         </div>
         <div className="flex gap-2">
-          <FiltersPopover
-            filters={filterOptions}
-            activeFilters={filters}
-            onFilterChange={handleFilterChange}
-            onClearFilters={handleClearFilters}
-          />
           <Button onClick={onCreateLead} className="bg-primary text-primary-foreground">
             <Plus className="h-4 w-4 mr-2" />
 

@@ -1,10 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useTransition } from 'react';
 import { ArrowLeft, Building2, User } from 'lucide-react';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
-import { createClient } from '@/lib/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -12,17 +11,16 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-
+import { createLead } from '../actions'
 
 interface CreateLeadProps {
   onBack: () => void;
+  onSuccess: () => void;
 }
 
-const TENANT_ID = '10d50f3f-b1b6-4230-b229-37bec3e39ada';
-
-export function CreateLead({ onBack }: CreateLeadProps) {
-  const t = useTranslations('leads.create');
-  const [loading, setLoading] = useState(false);
+export function CreateLead({ onBack, onSuccess }: CreateLeadProps) {
+  const t = useTranslations('leads.create')
+  const [loading, setLoading] = useState(false)
 
   const [formData, setFormData] = useState({
     customerType: 'company' as 'individual' | 'company',
@@ -57,76 +55,52 @@ export function CreateLead({ onBack }: CreateLeadProps) {
 
 
     notes: '',
-  });
+  })
 
   const handleChange = (field: keyof typeof formData, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-  };
+    setFormData((prev) => ({ ...prev, [field]: value }))
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!TENANT_ID) {
-      toast.error(t('errors.tenantNotConfigured'));
-      return;
-    }
-
-    const supabase = createClient();
+    e.preventDefault()
 
     try {
-      setLoading(true);
+      setLoading(true)
 
-      const payload = {
-        tenant_id: TENANT_ID,
-        customer_type: formData.customerType,
-        status: formData.status,
-        source: formData.source || null,
-        priority: formData.priority,
+      const form = new FormData()
+      form.append('customer_type', formData.customerType)
+      form.append('status', formData.status)
+      form.append('source', formData.source)
+      form.append('priority', formData.priority)
+      form.append('company_name', formData.customerType === 'company' ? formData.companyName : '')
+      form.append('industry', formData.customerType === 'company' ? formData.industry : '')
+      form.append('website', formData.customerType === 'company' ? formData.website : '')
+      form.append('first_name', formData.customerType === 'individual' ? formData.firstName : '')
+      form.append('last_name', formData.customerType === 'individual' ? formData.lastName : '')
+      form.append('contact_name', formData.contactName)
+      form.append('email', formData.email)
+      form.append('phone', formData.phone)
+      form.append('mobile', formData.mobile)
+      form.append('address', formData.address)
+      form.append('city', formData.city)
+      form.append('state', formData.state)
+      form.append('postal_code', formData.postalCode)
+      form.append('country_code', formData.countryCode)
+      form.append('interest', formData.interest)
+      form.append('estimated_value', formData.estimatedValue)
+      form.append('estimated_close_date', formData.estimatedCloseDate)
+      form.append('notes', formData.notes)
 
-        company_name: formData.customerType === 'company' ? formData.companyName : null,
-        industry: formData.customerType === 'company' ? formData.industry || null : null,
-
-        website: formData.customerType === 'company' ? formData.website || null : null,
-
-        first_name: formData.customerType === 'individual' ? formData.firstName : null,
-        last_name: formData.customerType === 'individual' ? formData.lastName : null,
-
-        contact_name: formData.contactName || null,
-        email: formData.email || null,
-        phone: formData.phone || null,
-
-        mobile: formData.mobile || null,
-
-        address: formData.address || null,
-        city: formData.city || null,
-        state: formData.state || null,
-        postal_code: formData.postalCode || null,
-        country_code: formData.countryCode || null,
-
-        interest: formData.interest || null,
-        estimated_value: formData.estimatedValue ? Number.parseFloat(formData.estimatedValue) : null,
-        estimated_close_date: formData.estimatedCloseDate || null,
-
-
-        notes: formData.notes || null,
-      };
-
-      const { error } = await supabase.from('leads').insert(payload);
-
-
-      if (error) {
-        throw error;
-      }
-
-      toast.success(t('toasts.created'));
-      onBack();
+      await createLead(form)
+      toast.success(t('toasts.created'))
+      onSuccess()
     } catch (error) {
-      console.error('Error creating lead:', error);
-      toast.error(t('toasts.createError'));
+      console.error('Error creating lead:', error)
+      toast.error(t('toasts.createError'))
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   return (
     <div className="space-y-6">
