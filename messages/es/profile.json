@@ -1,0 +1,13 @@
+{
+  "title": "Mi Perfil",
+  "subtitle": "Configura tus preferencias de idioma y tema.",
+  "language": "Idioma",
+  "languageDescription": "Selecciona tu idioma preferido",
+  "appearance": "Apariencia",
+  "appearanceDescription": "Selecciona el tema de la aplicación",
+  "themeLight": "Claro",
+  "themeDark": "Oscuro",
+  "saveChanges": "Guardar Cambios",
+  "preferencesSaved": "Preferencias guardadas",
+  "preferencesSavedDescription": "Tus cambios han sido aplicados exitosamente"
+}

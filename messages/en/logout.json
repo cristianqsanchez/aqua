@@ -1,0 +1,7 @@
+{
+  "title": "Log Out",
+  "description": "Are you sure you want to log out? You will need to log in again to access the application.",
+  "rememberSave": "Remember to save your work",
+  "rememberSaveDescription": "Make sure you have saved all changes before logging out.",
+  "confirmLogout": "Log Out"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Vue d'Ensemble de la Plateforme",
+  "subtitle": "Surveillez la santé des entreprises et les métriques de la plateforme",
+  "totalTenants": "Total des Entreprises",
+  "activeTenants": "Entreprises Actives",
+  "suspended": "Suspendus",
+  "monthlyRecurringRevenue": "Revenus Récurrents Mensuels",
+  "newThisMonth": "Nouveaux ce Mois",
+  "tenantsAtRisk": "Entreprises à Risque",
+  "tenantGrowth": "Croissance des Entreprises",
+  "statusDistribution": "Distribution des Statuts",
+  "revenueTrend": "Tendance des Revenus (MRR)",
+  "active": "Actif",
+  "suspendedStatus": "Suspendu",
+  "current": "À Jour",
+  "overdue": "Échu",
+  "gracePeriod": "Période de Grâce",
+  "paymentIssuesDetected": "Problèmes de Paiement Détectés",
+  "tenantHasPaymentIssues": "L'entreprise a des problèmes de paiement qui nécessitent attention.",
+  "tenantsHavePaymentIssues": "Les entreprises ont des problèmes de paiement qui nécessitent attention.",
+  "viewDetails": "Voir les Détails"
+}

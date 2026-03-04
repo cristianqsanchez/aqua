@@ -1,0 +1,22 @@
+{
+  "title": "Visión General de la Plataforma",
+  "subtitle": "Monitorea la salud de las empresas y métricas de la plataforma",
+  "totalTenants": "Total de Empresas",
+  "activeTenants": "Empresas Activas",
+  "suspended": "Suspendidos",
+  "monthlyRecurringRevenue": "Ingresos Recurrentes Mensuales",
+  "newThisMonth": "Nuevos este Mes",
+  "tenantsAtRisk": "Empresas en Riesgo",
+  "tenantGrowth": "Crecimiento de Empresas",
+  "statusDistribution": "Distribución de Estados",
+  "revenueTrend": "Tendencia de Ingresos (MRR)",
+  "active": "Activo",
+  "suspendedStatus": "Suspendido",
+  "current": "Al Día",
+  "overdue": "Vencido",
+  "gracePeriod": "Período de Gracia",
+  "paymentIssuesDetected": "Problemas de Pago Detectados",
+  "tenantHasPaymentIssues": "Empresa tiene problemas de pago que requieren atención.",
+  "tenantsHavePaymentIssues": "Empresas tienen problemas de pago que requieren atención.",
+  "viewDetails": "Ver Detalles"
+}

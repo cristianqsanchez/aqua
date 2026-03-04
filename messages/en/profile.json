@@ -1,0 +1,13 @@
+{
+  "title": "My Profile",
+  "subtitle": "Configure your language and theme preferences.",
+  "language": "Language",
+  "languageDescription": "Select your preferred language",
+  "appearance": "Appearance",
+  "appearanceDescription": "Select the application theme",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "saveChanges": "Save Changes",
+  "preferencesSaved": "Preferences saved",
+  "preferencesSavedDescription": "Your changes have been applied successfully"
+}

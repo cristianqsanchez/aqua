@@ -1,0 +1,22 @@
+{
+  "title": "Platform Overview",
+  "subtitle": "Monitor tenant health and platform metrics",
+  "totalTenants": "Total Tenants",
+  "activeTenants": "Active Tenants",
+  "suspended": "Suspended",
+  "monthlyRecurringRevenue": "Monthly Recurring Revenue",
+  "newThisMonth": "New this Month",
+  "tenantsAtRisk": "Tenants at Risk",
+  "tenantGrowth": "Tenant Growth",
+  "statusDistribution": "Status Distribution",
+  "revenueTrend": "Revenue Trend (MRR)",
+  "active": "Active",
+  "suspendedStatus": "Suspended",
+  "current": "Current",
+  "overdue": "Overdue",
+  "gracePeriod": "Grace Period",
+  "paymentIssuesDetected": "Payment Issues Detected",
+  "tenantHasPaymentIssues": "Tenant has payment issues that require attention.",
+  "tenantsHavePaymentIssues": "Tenants have payment issues that require attention.",
+  "viewDetails": "View Details"
+}

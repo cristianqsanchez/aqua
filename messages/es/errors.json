@@ -1,0 +1,7 @@
+{
+  "generic": "Ha ocurrido un error. Por favor intenta nuevamente.",
+  "network": "Error de red. Por favor verifica tu conexión.",
+  "unauthorized": "Acceso no autorizado.",
+  "notFound": "Recurso no encontrado.",
+  "serverError": "Error del servidor. Por favor intenta más tarde."
+}

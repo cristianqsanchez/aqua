@@ -1,0 +1,7 @@
+{
+  "title": "Cerrar Sesión",
+  "description": "¿Estás seguro de que deseas cerrar sesión? Tendrás que volver a iniciar sesión para acceder a la aplicación.",
+  "rememberSave": "Recuerda guardar tu trabajo",
+  "rememberSaveDescription": "Asegúrate de haber guardado todos los cambios antes de cerrar sesión.",
+  "confirmLogout": "Cerrar Sesión"
+}

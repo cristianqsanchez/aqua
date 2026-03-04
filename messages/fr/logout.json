@@ -1,0 +1,7 @@
+{
+  "title": "Fermer la Session",
+  "description": "Êtes-vous sûr de vouloir fermer la session ? Vous devrez vous reconnecter pour accéder à l'application.",
+  "rememberSave": "N'oubliez pas de sauvegarder votre travail",
+  "rememberSaveDescription": "Assurez-vous d'avoir enregistré toutes les modifications avant de fermer la session.",
+  "confirmLogout": "Fermer la Session"
+}
