@@ -10,7 +10,7 @@ import type { Lead } from './actions'
 type LeadsView = 'list' | 'create' | 'edit'
 
 export function LeadsClient({ initialLeads }: { initialLeads: Lead[] }) {
-  const t = useTranslations('leads')
+  const t = useTranslations('sales')
   const [currentView, setCurrentView] = useState<LeadsView>('list')
   const [selectedLeadId, setSelectedLeadId] = useState<string | null>(null)
   const [leads, setLeads] = useState<Lead[]>(initialLeads)

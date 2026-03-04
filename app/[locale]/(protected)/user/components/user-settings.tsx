@@ -42,7 +42,7 @@ type Strength = { score: number; label: string; badgeClass: string; barClass: st
 
 
 export function UserSettings({ open, onOpenChange }: UserSettingsProps) {
-  const tSettings = useTranslations('settings');
+  const tSettings = useTranslations('common.settings');
 
   const tCommon = useTranslations('common');
   const tValidation = useTranslations('validation');

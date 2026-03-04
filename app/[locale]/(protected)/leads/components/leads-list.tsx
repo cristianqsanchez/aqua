@@ -44,7 +44,7 @@ interface LeadsListProps {
 
 
 export function LeadsList({ leads: initialLeads, onCreateLead, onEditLead, onLeadDeleted }: LeadsListProps) {
-  const t = useTranslations('leads.list')
+  const t = useTranslations('sales')
   const tc = useTranslations('common')
 
   const [leads] = useState<Lead[]>(initialLeads)
@@ -433,13 +433,13 @@ export function LeadsList({ leads: initialLeads, onCreateLead, onEditLead, onLea
             <AlertDialogDescription>{t('delete.description')}</AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>{t('actions.cancel')}</AlertDialogCancel>
+            <AlertDialogCancel>{tc('cancel')}</AlertDialogCancel>
             <AlertDialogAction
               onClick={handleDelete}
               disabled={deleting}
               className="bg-destructive text-destructive-foreground"
             >
-              {deleting ? t('actions.deleting') : t('actions.confirmDelete')}
+              {deleting ? tc('deleting') : tc('delete')}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

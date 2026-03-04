@@ -23,7 +23,7 @@ interface LogoutDialogProps {
 }
 
 export function LogoutDialog({ open, onOpenChange, onConfirm }: LogoutDialogProps) {
-  const tLogout = useTranslations('logout');
+  const tLogout = useTranslations('common.logout');
   const tCommon = useTranslations('common');
 
   return (
