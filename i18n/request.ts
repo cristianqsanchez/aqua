@@ -49,6 +49,7 @@ const namespaces = [
   'invoiceWizardDemo',
   'invoiceWizard',
   'invoiceForm',
+  'leads'
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

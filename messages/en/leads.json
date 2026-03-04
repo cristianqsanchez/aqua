@@ -1,0 +1,130 @@
+{
+  "create": {
+    "actions": {
+      "back": "Back",
+      "cancel": "Cancel",
+      "create": "Create lead"
+    },
+    "title": "Create lead",
+    "subtitle": "Enter the lead details to get started.",
+    "sections": {
+      "customerType": {
+        "title": "Customer type",
+        "company": "Company",
+        "individual": "Individual"
+      },
+      "identity": {
+        "companyTitle": "Company information"
+      },
+      "contact": {
+        "title": "Contact information"
+      },
+      "address": {
+        "title": "Address"
+      },
+      "sales": {
+        "title": "Sales details"
+      }
+    },
+    "fields": {
+      "companyName": {
+        "label": "Company name",
+        "placeholder": "Enter company name"
+      },
+      "industry": {
+        "label": "Industry",
+        "placeholder": "Select an industry"
+      },
+      "website": {
+        "label": "Website",
+        "placeholder": "https://example.com"
+      },
+      "contactName": {
+        "label": "Contact name",
+        "placeholder": "Enter contact name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "name@company.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "Enter phone number"
+      },
+      "mobile": {
+        "label": "Mobile",
+        "placeholder": "Enter mobile number"
+      },
+      "address": {
+        "label": "Address",
+        "placeholder": "Street and number"
+      },
+      "city": {
+        "label": "City",
+        "placeholder": "Enter city"
+      },
+      "state": {
+        "label": "State/Province",
+        "placeholder": "Enter state or province"
+      },
+      "postalCode": {
+        "label": "Postal code",
+        "placeholder": "Enter postal code"
+      },
+      "countryCode": {
+        "label": "Country"
+      },
+      "status": {
+        "label": "Status"
+      },
+      "priority": {
+        "label": "Priority"
+      },
+      "source": {
+        "label": "Source",
+        "placeholder": "Select a source"
+      },
+      "interest": {
+        "label": "Interest",
+        "placeholder": "Describe the lead’s interest"
+      },
+      "estimatedValue": {
+        "label": "Estimated value",
+        "placeholder": "Enter an amount"
+      },
+      "estimatedCloseDate": {
+        "label": "Estimated close date"
+      },
+      "notes": {
+        "label": "Notes",
+        "placeholder": "Add any additional notes"
+      }
+    },
+    "countries": {
+      "ESP": "Spain",
+      "FRA": "France",
+      "PRT": "Portugal",
+      "USA": "United States",
+      "MEX": "Mexico"
+    },
+    "status": {
+      "new": "New",
+      "contacted": "Contacted",
+      "qualified": "Qualified",
+      "unqualified": "Unqualified"
+    },
+    "priority": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
+    "source": {
+      "website": "Website",
+      "referral": "Referral",
+      "cold_call": "Cold call",
+      "social_media": "Social media",
+      "advertisement": "Advertisement",
+      "other": "Other"
+    }
+  }
+}

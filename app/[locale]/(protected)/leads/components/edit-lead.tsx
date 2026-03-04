@@ -22,7 +22,8 @@ interface EditLeadProps {
 }
 
 export function EditLead({ leadId, onBack, onSuccess }: EditLeadProps) {
-  const t = useTranslations('leads.edit')
+  const t = useTranslations('leads.create')
+  const tc = useTranslations('common')
   const [loading, setLoading] = useState(false)
   const [loadingData, setLoadingData] = useState(true)
   const [formData, setFormData] = useState({
@@ -181,7 +182,7 @@ export function EditLead({ leadId, onBack, onSuccess }: EditLeadProps) {
           {t('actions.back')}
         </Button>
         <div>
-          <h2 className="text-xl font-semibold text-foreground">{t('title')}</h2>
+          <h2 className="text-xl font-semibold text-foreground">{t('titleEdit')}</h2>
           <p className="text-sm text-muted-foreground">{t('subtitle')}</p>
         </div>
       </div>
@@ -570,7 +571,7 @@ export function EditLead({ leadId, onBack, onSuccess }: EditLeadProps) {
             {t('actions.cancel')}
           </Button>
           <Button type="submit" disabled={loading} className="bg-primary text-primary-foreground">
-            {loading ? t('actions.saving') : t('actions.save')}
+            {loading ? tc('saving') : tc('save')}
           </Button>
         </div>
       </form>

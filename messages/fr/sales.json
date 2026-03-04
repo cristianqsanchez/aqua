@@ -378,5 +378,30 @@
   "completeAllRequiredFields": "Veuillez compléter tous les champs requis",
   "errorSavingClient": "Erreur lors de l'enregistrement du client",
   "totalRevenue": "Revenus Totaux",
-  "clientSince": "Client depuis"
+  "clientSince": "Client depuis",
+  "filters": {
+    "priority": "Priorité",
+    "customerType": "Type de client"
+  },
+  "customerType": {
+    "individual": "Particulier",
+    "company": "Entreprise"
+  },
+  "values": {
+    "empty": "—"
+  },
+  "actions": {
+    "newLead": "Nouveau lead",
+    "edit": "Modifier",
+    "delete": "Supprimer"
+  },
+  "search": {
+    "placeholder": "Rechercher des leads..."
+  },
+  "stats": {
+    "total": "Total",
+    "qualified": "Qualifiés",
+    "highPriority": "Haute priorité",
+    "estimatedValue": "Valeur estimée"
+  }
 }

@@ -1,0 +1,138 @@
+{
+  "create": {
+    "actions": {
+      "back": "Retour",
+      "cancel": "Annuler",
+      "create": "Créer un lead"
+    },
+    "title": "Créer un lead",
+    "titleEdit": "Modifier un lead",
+    "subtitle": "Saisissez les informations du lead pour commencer.",
+    "sections": {
+      "customerType": {
+        "title": "Type de client",
+        "company": "Entreprise",
+        "individual": "Particulier"
+      },
+      "identity": {
+        "companyTitle": "Informations sur l’entreprise"
+
+      },
+      "contact": {
+        "title": "Informations de contact"
+
+      },
+      "address": {
+        "title": "Adresse"
+
+      },
+      "sales": {
+        "title": "Détails commerciaux"
+      }
+    },
+    "fields": {
+      "companyName": {
+        "label": "Nom de l’entreprise",
+        "placeholder": "Saisissez le nom de l’entreprise"
+      },
+      "industry": {
+        "label": "Secteur",
+        "placeholder": "Sélectionnez un secteur"
+
+      },
+      "website": {
+        "label": "Site web",
+        "placeholder": "https://exemple.com"
+      },
+      "contactName": {
+        "label": "Nom du contact",
+        "placeholder": "Saisissez le nom du contact"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "nom@entreprise.com"
+      },
+      "phone": {
+        "label": "Téléphone",
+        "placeholder": "Saisissez le numéro de téléphone"
+      },
+      "mobile": {
+        "label": "Mobile",
+        "placeholder": "Saisissez le numéro de mobile"
+      },
+      "address": {
+        "label": "Adresse",
+        "placeholder": "Rue et numéro"
+      },
+
+      "city": {
+        "label": "Ville",
+        "placeholder": "Saisissez la ville"
+      },
+
+      "state": {
+        "label": "État/Province",
+        "placeholder": "Saisissez l’état ou la province"
+      },
+      "postalCode": {
+        "label": "Code postal",
+        "placeholder": "Saisissez le code postal"
+      },
+      "countryCode": {
+        "label": "Pays"
+      },
+      "status": {
+        "label": "Statut"
+      },
+      "priority": {
+        "label": "Priorité"
+      },
+      "source": {
+        "label": "Source",
+        "placeholder": "Sélectionnez une source"
+      },
+      "interest": {
+        "label": "Intérêt",
+        "placeholder": "Décrivez l’intérêt du lead"
+      },
+      "estimatedValue": {
+        "label": "Valeur estimée",
+        "placeholder": "Saisissez un montant"
+      },
+      "estimatedCloseDate": {
+        "label": "Date de clôture estimée"
+      },
+      "notes": {
+        "label": "Notes",
+        "placeholder": "Ajoutez des notes supplémentaires"
+
+      }
+    },
+    "countries": {
+      "ESP": "Espagne",
+      "FRA": "France",
+      "PRT": "Portugal",
+      "USA": "États-Unis",
+      "MEX": "Mexique"
+    },
+    "status": {
+      "new": "Nouveau",
+      "contacted": "Contacté",
+      "qualified": "Qualifié",
+      "unqualified": "Non qualifié"
+    },
+    "priority": {
+      "low": "Faible",
+      "medium": "Moyenne",
+      "high": "Élevée"
+    },
+    "source": {
+      "website": "Site web",
+      "referral": "Recommandation",
+      "cold_call": "Appel à froid",
+      "social_media": "Réseaux sociaux",
+      "advertisement": "Publicité",
+      "other": "Autre"
+    }
+  }
+}
