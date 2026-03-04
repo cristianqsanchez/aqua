@@ -58,5 +58,65 @@
   "accountCreated": "Account created successfully",
   "accountUpdated": "Account updated successfully",
   "accountDeleted": "Account deleted successfully",
-  "requiredFieldsError": "Please complete all required fields"
+  "requiredFieldsError": "Please complete all required fields",
+  "list": {
+    "search": {
+      "placeholder": "Search accounts..."
+    },
+    "filters": {
+      "accountType": {
+        "label": "Account type"
+      },
+      "relationshipStatus": {
+        "label": "Relationship status"
+      }
+    },
+    "accountType": {
+      "customer": "Customer",
+      "supplier": "Supplier",
+      "prospect": "Prospect",
+      "partner": "Partner"
+    },
+    "relationshipStatus": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "prospect": "Prospect",
+      "partner": "Partner"
+    },
+    "actions": {
+      "newAccount": "New account",
+      "edit": "Edit",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "confirmDelete": "Delete"
+    },
+    "stats": {
+      "total": "Total",
+      "activeCustomers": "Active customers",
+      "prospects": "Prospects",
+      "partners": "Partners"
+    },
+    "table": {
+      "number": "Number",
+      "name": "Name",
+      "type": "Type",
+      "status": "Status",
+      "industry": "Industry",
+      "contact": "Contact",
+      "location": "Location",
+      "annualRevenue": "Annual revenue",
+      "actions": "Actions"
+    },
+    "values": {
+      "empty": "—"
+    },
+    "empty": {
+      "filteredTitle": "No accounts found",
+      "filteredSubtitle": "No accounts match the selected filters."
+    },
+    "delete": {
+      "title": "Delete account?",
+      "description": "This action cannot be undone."
+    }
+  }
 }

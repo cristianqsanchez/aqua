@@ -58,5 +58,65 @@
   "accountCreated": "Cuenta creada exitosamente",
   "accountUpdated": "Cuenta actualizada exitosamente",
   "accountDeleted": "Cuenta eliminada exitosamente",
-  "requiredFieldsError": "Por favor completa todos los campos obligatorios"
+  "requiredFieldsError": "Por favor completa todos los campos obligatorios",
+  "list": {
+    "search": {
+      "placeholder": "Buscar cuentas..."
+    },
+    "filters": {
+      "accountType": {
+        "label": "Tipo de cuenta"
+      },
+      "relationshipStatus": {
+        "label": "Estado de la relación"
+      }
+    },
+    "accountType": {
+      "customer": "Cliente",
+      "supplier": "Proveedor",
+      "prospect": "Prospecto",
+      "partner": "Socio"
+    },
+    "relationshipStatus": {
+      "active": "Activa",
+      "inactive": "Inactiva",
+      "prospect": "Prospecto",
+      "partner": "Socio"
+    },
+    "actions": {
+      "newAccount": "Nueva cuenta",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "cancel": "Cancelar",
+      "confirmDelete": "Eliminar"
+    },
+    "stats": {
+      "total": "Total",
+      "activeCustomers": "Clientes activos",
+      "prospects": "Prospectos",
+      "partners": "Socios"
+    },
+    "table": {
+      "number": "Número",
+      "name": "Nombre",
+      "type": "Tipo",
+      "status": "Estado",
+      "industry": "Industria",
+      "contact": "Contacto",
+      "location": "Ubicación",
+      "annualRevenue": "Ingresos anuales",
+      "actions": "Acciones"
+    },
+    "values": {
+      "empty": "—"
+    },
+    "empty": {
+      "filteredTitle": "No se encontraron cuentas",
+      "filteredSubtitle": "No hay cuentas que coincidan con los filtros seleccionados."
+    },
+    "delete": {
+      "title": "¿Eliminar cuenta?",
+      "description": "Esta acción no se puede deshacer."
+    }
+  }
 }

@@ -58,5 +58,65 @@
   "accountCreated": "Compte créé avec succès",
   "accountUpdated": "Compte mis à jour avec succès",
   "accountDeleted": "Compte supprimé avec succès",
-  "requiredFieldsError": "Veuillez remplir tous les champs obligatoires"
+  "requiredFieldsError": "Veuillez remplir tous les champs obligatoires",
+  "list": {
+    "search": {
+      "placeholder": "Rechercher des comptes..."
+    },
+    "filters": {
+      "accountType": {
+        "label": "Type de compte"
+      },
+      "relationshipStatus": {
+        "label": "Statut de la relation"
+      }
+    },
+    "accountType": {
+      "customer": "Client",
+      "supplier": "Fournisseur",
+      "prospect": "Prospect",
+      "partner": "Partenaire"
+    },
+    "relationshipStatus": {
+      "active": "Actif",
+      "inactive": "Inactif",
+      "prospect": "Prospect",
+      "partner": "Partenaire"
+    },
+    "actions": {
+      "newAccount": "Nouveau compte",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "cancel": "Annuler",
+      "confirmDelete": "Supprimer"
+    },
+    "stats": {
+      "total": "Total",
+      "activeCustomers": "Clients actifs",
+      "prospects": "Prospects",
+      "partners": "Partenaires"
+    },
+    "table": {
+      "number": "Numéro",
+      "name": "Nom",
+      "type": "Type",
+      "status": "Statut",
+      "industry": "Secteur",
+      "contact": "Contact",
+      "location": "Localisation",
+      "annualRevenue": "Chiffre d’affaires annuel",
+      "actions": "Actions"
+    },
+    "values": {
+      "empty": "—"
+    },
+    "empty": {
+      "filteredTitle": "Aucun compte trouvé",
+      "filteredSubtitle": "Aucun compte ne correspond aux filtres sélectionnés."
+    },
+    "delete": {
+      "title": "Supprimer le compte ?",
+      "description": "Cette action est irréversible."
+    }
+  }
 }
