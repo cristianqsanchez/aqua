@@ -118,5 +118,111 @@
       "title": "Delete account?",
       "description": "This action cannot be undone."
     }
+  },
+  "create": {
+    "title": "Create account",
+    "subtitle": "Add a new account and its details",
+    "sections": {
+      "basic": { "title": "Basic information" },
+      "contact": { "title": "Contact information" },
+      "billing": { "title": "Billing address" },
+      "shipping": { "title": "Shipping address" },
+      "additional": { "title": "Additional information" }
+    },
+    "accountType": {
+      "customer": "Customer",
+      "prospect": "Prospect",
+      "partner": "Partner",
+      "supplier": "Supplier"
+    },
+    "relationshipStatus": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "prospect": "Prospect",
+      "partner": "Partner"
+    },
+    "countries": {
+      "PRT": "Portugal",
+      "USA": "United States",
+      "MEX": "Mexico",
+      "ESP": "Spain",
+      "FRA": "France"
+    },
+    "fields": {
+      "accountName": {
+        "label": "Account name",
+        "placeholder": "Enter the account name"
+      },
+      "accountType": {
+        "label": "Account type"
+      },
+      "relationshipStatus": {
+        "label": "Relationship status"
+      },
+      "industry": {
+        "label": "Industry",
+        "placeholder": "Select an industry"
+      },
+      "website": {
+        "label": "Website",
+        "placeholder": "https://example.com"
+      },
+      "annualRevenue": {
+        "label": "Annual revenue",
+        "placeholder": "Enter the annual revenue"
+      },
+      "employeeCount": {
+        "label": "Employee count",
+        "placeholder": "Enter the number of employees"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "name@company.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+1 555 000 0000"
+      },
+      "billingAddress": {
+        "label": "Address",
+        "placeholder": "Street and number"
+      },
+      "billingCity": {
+        "label": "City",
+        "placeholder": "Enter the city"
+      },
+      "billingState": {
+        "label": "State / Province",
+        "placeholder": "Enter the state or province"
+      },
+      "billingPostalCode": {
+        "label": "Postal code",
+        "placeholder": "Enter the postal code"
+      },
+      "billingCountryCode": {
+        "label": "Country"
+      },
+      "shippingSameAsBilling": {
+        "label": "Shipping address is the same as billing address"
+      },
+      "taxId": {
+        "label": "Tax ID",
+        "placeholder": "Enter the tax ID"
+      },
+      "notes": {
+        "label": "Notes",
+        "placeholder": "Add notes (optional)"
+      }
+    },
+    "actions": {
+      "back": "Back",
+      "cancel": "Cancel",
+      "create": "Create account",
+      "save": "Save account",
+      "saving": "Saving..."
+    },
+    "toasts": {
+      "updated": "Account updated successfully"
+    }
   }
 }

@@ -118,5 +118,111 @@
       "title": "¿Eliminar cuenta?",
       "description": "Esta acción no se puede deshacer."
     }
+  },
+  "create": {
+    "title": "Crear cuenta",
+    "subtitle": "Agrega una nueva cuenta y sus detalles",
+    "sections": {
+      "basic": { "title": "Información básica" },
+      "contact": { "title": "Información de contacto" },
+      "billing": { "title": "Dirección de facturación" },
+      "shipping": { "title": "Dirección de envío" },
+      "additional": { "title": "Información adicional" }
+    },
+    "accountType": {
+      "customer": "Cliente",
+      "prospect": "Prospecto",
+      "partner": "Socio",
+      "supplier": "Proveedor"
+    },
+    "relationshipStatus": {
+      "active": "Activo",
+      "inactive": "Inactivo",
+      "prospect": "Prospecto",
+      "partner": "Socio"
+    },
+    "countries": {
+      "PRT": "Portugal",
+      "USA": "Estados Unidos",
+      "MEX": "México",
+      "ESP": "España",
+      "FRA": "Francia"
+    },
+    "fields": {
+      "accountName": {
+        "label": "Nombre de la cuenta",
+        "placeholder": "Ingresa el nombre de la cuenta"
+      },
+      "accountType": {
+        "label": "Tipo de cuenta"
+      },
+      "relationshipStatus": {
+        "label": "Estado de la relación"
+      },
+      "industry": {
+        "label": "Industria",
+        "placeholder": "Selecciona una industria"
+      },
+      "website": {
+        "label": "Sitio web",
+        "placeholder": "https://ejemplo.com"
+      },
+      "annualRevenue": {
+        "label": "Ingresos anuales",
+        "placeholder": "Ingresa los ingresos anuales"
+      },
+      "employeeCount": {
+        "label": "Número de empleados",
+        "placeholder": "Ingresa el número de empleados"
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "placeholder": "nombre@empresa.com"
+      },
+      "phone": {
+        "label": "Teléfono",
+        "placeholder": "+57 300 000 0000"
+      },
+      "billingAddress": {
+        "label": "Dirección",
+        "placeholder": "Calle y número"
+      },
+      "billingCity": {
+        "label": "Ciudad",
+        "placeholder": "Ingresa la ciudad"
+      },
+      "billingState": {
+        "label": "Departamento / Provincia",
+        "placeholder": "Ingresa el departamento o provincia"
+      },
+      "billingPostalCode": {
+        "label": "Código postal",
+        "placeholder": "Ingresa el código postal"
+      },
+      "billingCountryCode": {
+        "label": "País"
+      },
+      "shippingSameAsBilling": {
+        "label": "La dirección de envío es la misma que la dirección de facturación"
+      },
+      "taxId": {
+        "label": "NIT / ID fiscal",
+        "placeholder": "Ingresa el NIT / ID fiscal"
+      },
+      "notes": {
+        "label": "Notas",
+        "placeholder": "Agrega notas (opcional)"
+      }
+    },
+    "actions": {
+      "back": "Atrás",
+      "cancel": "Cancelar",
+      "create": "Crear cuenta",
+      "save": "Guardar cuenta",
+      "saving": "Guardando..."
+    },
+    "toasts": {
+      "updated": "Cuenta actualizada correctamente"
+    }
   }
 }

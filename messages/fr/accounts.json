@@ -118,5 +118,111 @@
       "title": "Supprimer le compte ?",
       "description": "Cette action est irréversible."
     }
+  },
+  "create": {
+    "title": "Créer un compte",
+    "subtitle": "Ajoutez un nouveau compte et ses détails",
+    "sections": {
+      "basic": { "title": "Informations de base" },
+      "contact": { "title": "Informations de contact" },
+      "billing": { "title": "Adresse de facturation" },
+      "shipping": { "title": "Adresse de livraison" },
+      "additional": { "title": "Informations complémentaires" }
+    },
+    "accountType": {
+      "customer": "Client",
+      "prospect": "Prospect",
+      "partner": "Partenaire",
+      "supplier": "Fournisseur"
+    },
+    "relationshipStatus": {
+      "active": "Actif",
+      "inactive": "Inactif",
+      "prospect": "Prospect",
+      "partner": "Partenaire"
+    },
+    "countries": {
+      "PRT": "Portugal",
+      "USA": "États-Unis",
+      "MEX": "Mexique",
+      "ESP": "Espagne",
+      "FRA": "France"
+    },
+    "fields": {
+      "accountName": {
+        "label": "Nom du compte",
+        "placeholder": "Saisissez le nom du compte"
+      },
+      "accountType": {
+        "label": "Type de compte"
+      },
+      "relationshipStatus": {
+        "label": "Statut de la relation"
+      },
+      "industry": {
+        "label": "Secteur",
+        "placeholder": "Sélectionnez un secteur"
+      },
+      "website": {
+        "label": "Site web",
+        "placeholder": "https://exemple.com"
+      },
+      "annualRevenue": {
+        "label": "Chiffre d’affaires annuel",
+        "placeholder": "Saisissez le chiffre d’affaires annuel"
+      },
+      "employeeCount": {
+        "label": "Nombre d’employés",
+        "placeholder": "Saisissez le nombre d’employés"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "nom@entreprise.com"
+      },
+      "phone": {
+        "label": "Téléphone",
+        "placeholder": "+33 6 00 00 00 00"
+      },
+      "billingAddress": {
+        "label": "Adresse",
+        "placeholder": "Rue et numéro"
+      },
+      "billingCity": {
+        "label": "Ville",
+        "placeholder": "Saisissez la ville"
+      },
+      "billingState": {
+        "label": "Région / Province",
+        "placeholder": "Saisissez la région ou la province"
+      },
+      "billingPostalCode": {
+        "label": "Code postal",
+        "placeholder": "Saisissez le code postal"
+      },
+      "billingCountryCode": {
+        "label": "Pays"
+      },
+      "shippingSameAsBilling": {
+        "label": "L’adresse de livraison est identique à l’adresse de facturation"
+      },
+      "taxId": {
+        "label": "Identifiant fiscal",
+        "placeholder": "Saisissez l’identifiant fiscal"
+      },
+      "notes": {
+        "label": "Notes",
+        "placeholder": "Ajouter des notes (facultatif)"
+      }
+    },
+    "actions": {
+      "back": "Retour",
+      "cancel": "Annuler",
+      "create": "Créer un compte",
+      "save": "Enregistrer le compte",
+      "saving": "Enregistrement..."
+    },
+    "toasts": {
+      "updated": "Compte mis à jour avec succès"
+    }
   }
 }

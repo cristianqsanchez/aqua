@@ -91,7 +91,7 @@ function mapAccountToFormValues(locale: string, account?: AccountDetails | null)
 }
 
 export function AccountForm({ locale, mode, account, onBack }: AccountFormProps) {
-  const t = useTranslations(`accounts.${mode}`)
+  const t = useTranslations('accounts.create')
   const [isPending, startTransition] = useTransition()
   const [formData, setFormData] = useState<AccountFormValues>(() => mapAccountToFormValues(locale, account))
 
