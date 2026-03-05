@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useMemo, useState, useTransition } from 'react';
+import { useMemo, useState, useTransition } from 'react';
 import { ChevronDown, Loader2, User as UserIcon } from 'lucide-react';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
 
+import { useUser } from '@/components/providers/user-provider';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -15,70 +16,36 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-
 import { UserProfile } from '@/app/[locale]/(protected)/user/components/user-profile';
 import { UserSettings } from '@/app/[locale]/(protected)/user/components/user-settings';
 import { LogoutDialog } from '@/app/[locale]/(protected)/user/components/logout-dialog';
 
+import { signOut } from './header.actions';
 
-import { getHeaderUser, signOut } from './header.actions';
-
-type HeaderUser = {
-  displayName: string;
-  email: string;
-};
 
 export function Header() {
   const tUserMenu = useTranslations('userMenu');
   const tLogout = useTranslations('logout');
   const tCommon = useTranslations('common');
 
+  const { user, loading: loadingUser } = useUser();
+
   const [showProfile, setShowProfile] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
 
   const [showLogoutDialog, setShowLogoutDialog] = useState(false);
 
-  const [user, setUser] = useState<HeaderUser>({ displayName: tCommon('loading'), email: '' });
-  const [loadingUser, setLoadingUser] = useState(true);
   const [isPending, startTransition] = useTransition();
 
-  useEffect(() => {
-    let mounted = true;
-
-    (async () => {
-      try {
-        setLoadingUser(true);
-        const u = await getHeaderUser();
-        if (!mounted) return;
-
-        if (u) {
-          setUser(u);
-        } else {
-          setUser({ displayName: tCommon('unknownUser'), email: '' });
-        }
-      } catch {
-        if (!mounted) return;
-        setUser({ displayName: tCommon('unknownUser'), email: '' });
-      } finally {
-        if (!mounted) return;
-        setLoadingUser(false);
-      }
-    })();
-
-    return () => {
-      mounted = false;
-    };
-  }, [tCommon]);
-
   const initials = useMemo(() => {
-    const name = (user.displayName || '').trim();
+    const name = (user?.displayName || '').trim();
 
     if (!name) return 'U';
     const parts = name.split(/\s+/).filter(Boolean);
     const first = parts[0]?.[0]?.toUpperCase() ?? 'U';
     const second = parts.length > 1 ? parts[parts.length - 1]?.[0]?.toUpperCase() : '';
     return `${first}${second}`.slice(0, 2);
-  }, [user.displayName]);
+  }, [user?.displayName]);
 
 
   const handleLogout = async () => {
@@ -119,9 +86,9 @@ export function Header() {
 
                 <div className="text-left">
                   <div className="text-sm font-medium text-foreground">
-                    {loadingUser ? tCommon('loading') : user.displayName}
+                    {loadingUser ? tCommon('loading') : user?.displayName ?? tCommon('unknownUser')}
                   </div>
-                  <div className="text-xs text-muted-foreground">{user.email}</div>
+                  <div className="text-xs text-muted-foreground">{user?.email ?? ''}</div>
                 </div>
 
                 <ChevronDown className="w-4 h-4 text-muted-foreground" />

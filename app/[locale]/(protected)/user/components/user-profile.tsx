@@ -3,7 +3,10 @@
 import { useEffect, useMemo, useState, useTransition } from 'react';
 import { Globe, Sun, Moon, Loader2 } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
+import { usePathname, useRouter } from 'next/navigation';
 import { toast } from 'sonner';
+
+import { useUser } from '@/components/providers/user-provider';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -23,7 +26,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 
-import { getProfileUser, setLocaleCookie } from './actions';
+import { setLocaleCookie } from './actions';
 
 interface UserProfileProps {
   open: boolean;
@@ -61,18 +64,10 @@ export function UserProfile({ open, onOpenChange }: UserProfileProps) {
   const tUserMenu = useTranslations('userMenu');
 
   const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
 
-  const [loadingUser, setLoadingUser] = useState(true);
-  const [user, setUser] = useState<{
-    displayName: string;
-    email: string;
-    roleLabel: string;
-
-  }>({
-    displayName: tCommon('loading'),
-    email: '',
-    roleLabel: '',
-  });
+  const { user: contextUser, loading: loadingUser, refreshUser } = useUser();
 
   const [theme, setTheme] = useState<ThemeMode>('light');
   const [language, setLanguage] = useState<string>(locale);
@@ -92,63 +87,26 @@ export function UserProfile({ open, onOpenChange }: UserProfileProps) {
     setLanguage(locale);
   }, [locale]);
 
-  useEffect(() => {
-    let mounted = true;
-
-    (async () => {
-      try {
-        setLoadingUser(true);
-        const u = await getProfileUser();
-        if (!mounted) return;
-
-        if (!u) {
-          setUser({
-            displayName: tCommon('unknownUser'),
-            email: '',
-            roleLabel: '',
-          });
-          return;
-        }
-
-        setUser(u);
-      } catch {
-        if (!mounted) return;
-        setUser({
-          displayName: tCommon('unknownUser'),
-          email: '',
-          roleLabel: '',
-        });
-      } finally {
-        if (!mounted) return;
-        setLoadingUser(false);
-      }
-    })();
-
-    return () => {
-      mounted = false;
-    };
-  }, [tCommon]);
-
   const initials = useMemo(() => {
-    const name = (user.displayName || '').trim();
+    const name = (contextUser?.displayName || '').trim();
 
     if (!name) return 'U';
     const parts = name.split(/\s+/).filter(Boolean);
     const first = parts[0]?.[0]?.toUpperCase() ?? 'U';
     const second = parts.length > 1 ? parts[parts.length - 1]?.[0]?.toUpperCase() : '';
     return `${first}${second}`.slice(0, 2);
-  }, [user.displayName]);
+  }, [contextUser?.displayName]);
 
   const handleSave = () => {
     startTransition(async () => {
       try {
         if (language !== locale) {
           await setLocaleCookie(language);
-          // next-intl will pick it up on next navigation/refresh; keep this lightweight here
-          window.location.reload();
+          router.push(pathname);
           return;
         }
 
+        await refreshUser();
         toast.success(tProfile('preferencesSaved'), {
           description: tProfile('preferencesSavedDescription'),
         });
@@ -189,11 +147,11 @@ export function UserProfile({ open, onOpenChange }: UserProfileProps) {
 
             <div className="min-w-0">
               <h3 className="text-lg font-semibold text-foreground truncate">
-                {loadingUser ? tCommon('loading') : user.displayName}
+                {loadingUser ? tCommon('loading') : contextUser?.displayName ?? tCommon('unknownUser')}
               </h3>
-              <p className="text-sm text-muted-foreground truncate">{user.email}</p>
+              <p className="text-sm text-muted-foreground truncate">{contextUser?.email ?? ''}</p>
               <p className="text-xs text-muted-foreground mt-1">
-                {user.roleLabel || tUserMenu('admin')}
+                {contextUser?.roleLabel || tUserMenu('admin')}
               </p>
             </div>
           </div>

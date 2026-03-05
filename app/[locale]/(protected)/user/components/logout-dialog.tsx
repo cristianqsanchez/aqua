@@ -1,6 +1,6 @@
 'use client';
 
-import { LogOut, AlertTriangle } from 'lucide-react';
+import { LogOut, AlertTriangle, Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/ui/button';
@@ -20,9 +20,10 @@ interface LogoutDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   onConfirm: () => void | Promise<void>;
+  loading?: boolean;
 }
 
-export function LogoutDialog({ open, onOpenChange, onConfirm }: LogoutDialogProps) {
+export function LogoutDialog({ open, onOpenChange, onConfirm, loading }: LogoutDialogProps) {
   const tLogout = useTranslations('common.logout');
   const tCommon = useTranslations('common');
 
@@ -65,8 +66,8 @@ export function LogoutDialog({ open, onOpenChange, onConfirm }: LogoutDialogProp
 
           <AlertDialogAction asChild>
 
-            <Button variant="destructive" onClick={onConfirm} className="gap-2">
-              <LogOut className="w-4 h-4" />
+            <Button variant="destructive" onClick={onConfirm} disabled={loading} className="gap-2">
+              {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <LogOut className="w-4 h-4" />}
               {tLogout('confirmButton')}
             </Button>
           </AlertDialogAction>
