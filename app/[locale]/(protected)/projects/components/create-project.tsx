@@ -129,7 +129,7 @@ export function CreateProject({ onBack, onSuccess }: CreateProjectProps) {
       toast.success(t('toasts.created'));
       onSuccess ? onSuccess() : onBack();
     } catch (error) {
-      // eslint-disable-next-line no-console
+
       console.error('Error creating project:', error);
       toast.error(t('errors.create'));
     } finally {
@@ -342,7 +342,7 @@ export function CreateProject({ onBack, onSuccess }: CreateProjectProps) {
 
         <div className="flex items-center justify-end gap-3">
           <Button type="button" variant="outline" onClick={onBack} disabled={loading}>
-            {tc('actions.cancel')}
+            {tc('cancel')}
           </Button>
           <Button type="submit" disabled={loading} className="gap-2">
             {loading && <Loader2 className="h-4 w-4 animate-spin" />}

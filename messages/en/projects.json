@@ -1,14 +1,18 @@
 {
   "title": "Projects",
-  "subtitle": "Construction and maintenance project management for pools",
+  "subtitle": "Construction and swimming pool maintenance project management",
   "allProjects": "All projects",
   "active": "Active",
   "completed": "Completed",
+
   "onHold": "On hold",
   "newProject": "New project",
+
   "createProject": "Create project",
   "editProject": "Edit project",
+
   "projectDetails": "Project details",
+
   "projectInfo": "Project information",
   "backToProjects": "Back to projects",
   "createNewProject": "Create a new construction or maintenance project",
@@ -24,7 +28,7 @@
   "activeProjects": "Active",
   "activeProjectsDescription": "In preparation / execution",
   "atRisk": "At Risk",
-  "atRiskDescription": "With overdue completion",
+  "atRiskDescription": "Past due date",
   "avgRealMargin": "Average Real Margin",
   "allProjectsLabel": "All projects",
   "pendingInvoicing": "Pending Invoicing",
@@ -47,7 +51,7 @@
   "typeNewInstallation": "New Installation",
   "typeRenovation": "Renovation",
   "typeMaintenance": "Maintenance",
-  "typeAfterSales": "After-Sales",
+  "typeAfterSales": "After-sales",
   "typeWarranty": "Warranty",
   "priorityHigh": "High",
   "priorityMedium": "Medium",
@@ -59,6 +63,7 @@
   "status": "Status",
   "expectedEndDate": "Expected End",
   "progress": "Progress",
+
   "total": "Total",
   "realCost": "Real Cost",
   "estimatedMargin": "Est. Margin",
@@ -79,8 +84,8 @@
   "openingGanttView": "Opening Gantt planning view",
   "projectPaused": "paused",
   "projectResumed": "resumed",
-  "projectPausedSuccess": "has been paused successfully",
-  "projectResumedSuccess": "has been resumed successfully",
+  "projectPausedSuccess": "has been successfully paused",
+  "projectResumedSuccess": "has been successfully resumed",
   "confirmCancelProject": "Are you sure you want to cancel the project",
   "cancelProjectConfirmMessage": "This action will change the status to \"Cancelled\".",
   "projectCancelled": "Project cancelled",
@@ -93,7 +98,7 @@
   "resumeProjectButton": "Resume Project",
   "closeProjectButton": "Close Project",
   "confirmCloseProject": "Are you sure you want to close this project?",
-  "projectClosedSuccess": "Project closed successfully",
+  "projectClosedSuccess": "Project successfully closed",
   "errorClosingProject": "Error closing project",
   "errorLoadingProject": "Error loading project",
   "projectType": "Project Type",
@@ -115,10 +120,12 @@
   "realCostLabel": "Real Cost",
   "estimatedMarginLabel": "Estimated Margin",
   "realMarginLabel": "Real Margin",
+
   "marginDelta": "Δ Margin",
   "aboveEstimate": "above estimate",
   "belowEstimate": "below estimate",
   "summary": "Summary",
+
   "phases": "Phases",
   "milestones": "Milestones",
   "subcontractors": "Subcontractors",
@@ -130,7 +137,9 @@
   "location": "Location",
   "noLocation": "No location specified",
   "progressAndDates": "Progress and Dates",
+
   "progressLabel": "Progress",
+
   "scheduledDuration": "Scheduled Duration",
   "realDuration": "Real Duration",
   "daysLabel": "days",
@@ -173,11 +182,13 @@
   "projectSubcontractors": "Project Subcontractors",
   "addSubcontractor": "Add subcontractor",
   "subcontractorName": "Subcontractor name",
+
   "specialty": "Specialty",
   "contactInfo": "Contact information",
   "contractAmount": "Contract amount",
   "paymentStatus": "Payment status",
   "noSubcontractorsYet": "No subcontractors assigned yet",
+
   "addFirstSubcontractor": "Add first subcontractor",
   "backToProjectsList": "Back to project list",
   "newProjectTitle": "New Project",
@@ -186,7 +197,7 @@
   "editProjectSubtitle": "Update project information",
   "basicInformation": "Basic Information",
   "projectName": "Project Name",
-  "projectNamePlaceholder": "Ex: Premium Residential Pool",
+  "projectNamePlaceholder": "Example: Premium Residential Pool",
   "clientLabel": "Client",
   "selectClient": "Select client",
   "projectTypeLabel": "Project Type",
@@ -197,16 +208,16 @@
   "selectPriority": "Select priority",
   "financialInformation": "Financial Information",
   "budgetLabel": "Budget",
-  "budgetPlaceholder": "Ex: 50000",
+  "budgetPlaceholder": "Example: 50000",
   "estimatedMarginInput": "Estimated Margin",
-  "estimatedMarginPlaceholder": "Ex: 15000",
+  "estimatedMarginPlaceholder": "Example: 15000",
   "currency": "Currency",
   "selectCurrency": "Select currency",
   "contractInfo": "Contract Information",
   "contractNumberInput": "Contract No.",
-  "contractNumberPlaceholder": "Ex: CTR-2024-001",
+  "contractNumberPlaceholder": "Example: CTR-2024-001",
   "totalContractAmount": "Total Contract Amount",
-  "totalContractPlaceholder": "Ex: 60000",
+  "totalContractPlaceholder": "Example: 60000",
   "datesAndLocation": "Dates and Location",
   "startDate": "Start Date",
   "endDate": "End Date",
@@ -241,17 +252,22 @@
   "budget": "Budget",
   "team": "Team",
   "filters": {
-    "title": "Filters"
+    "title": "Filters",
+    "status": "Status",
+    "type": "Type",
+    "priority": "Priority",
+    "onlyAtRisk": "Only at-risk projects",
+    "count": "Filters"
   },
   "search": {
     "placeholder": "Search projects..."
   },
   "kpis": {
     "activeProjects": "Active projects",
-    "activeProjectsDescription": "Projects currently in progress or on hold",
+    "activeProjectsDescription": "Projects in progress or on hold",
     "atRisk": "At risk",
-    "atRiskDescription": "Projects with margin below the estimate",
-    "avgRealMargin": "Avg. actual margin",
+    "atRiskDescription": "Projects with margin below estimate",
+    "avgRealMargin": "Average real margin",
     "allProjectsLabel": "All projects",
     "pendingInvoicing": "Pending invoicing",
     "activeProjectsLabel": "Active only"
@@ -277,6 +293,7 @@
     "repair": "Repair",
     "newConstruction": "New construction"
   },
+
   "table": {
     "code": "Code",
     "project": "Project",
@@ -286,10 +303,10 @@
     "plannedEnd": "Planned end",
     "progress": "Progress",
     "total": "Total",
-    "realCost": "Actual cost",
+    "realCost": "Real cost",
     "estimatedMargin": "Estimated margin",
-    "realMargin": "Actual margin",
-    "deltaMargin": "Margin variance"
+    "realMargin": "Real margin",
+    "deltaMargin": "Margin variation"
   },
   "actions": {
     "newProject": "New project",
@@ -297,6 +314,57 @@
     "pause": "Pause project",
     "cancel": "Cancel project",
     "view": "View",
-    "edit": "Edit"
+    "edit": "Edit",
+    "backToList": "Back to project list",
+    "clearFilters": "Clear filters"
+  },
+  "currencyOptions": {
+    "usd": "USD ($)",
+    "eur": "EUR (€)",
+    "gbp": "GBP (£)",
+    "chf": "CHF (CHF)"
+  },
+  "fields": {
+    "branch": "Branch",
+    "address": "Address",
+    "description": "Description",
+    "currency": "Currency",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "client": "Client",
+    "type": "Type",
+    "status": "Status",
+    "budget": "Budget",
+    "name": "Project name"
+  },
+  "placeholders": {
+    "branch": "Select branch",
+    "address": "Project address",
+    "description": "Describe the project, special features, etc.",
+    "budget": "Example: 50000",
+    "currency": "Select currency",
+    "name": "Example: Premium Residential Pool",
+    "client": "Select client",
+    "type": "Select type",
+    "status": "Select status"
+  },
+  "create": {
+    "title": "New Project",
+    "subtitle": "Create a new construction or maintenance project",
+    "basicInformation": "Basic Information",
+    "createButton": "Create project"
+  },
+  "clientSelector": {
+    "searchPlaceholder": "Search client...",
+    "empty": {
+      "title": "No clients found",
+      "subtitle": "Try adjusting the search term"
+    },
+    "status": {
+      "prospect": "Prospect",
+      "active": "Active",
+      "vip": "VIP",
+      "inactive": "Inactive"
+    }
   }
 }

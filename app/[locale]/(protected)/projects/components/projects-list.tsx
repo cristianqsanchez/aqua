@@ -102,7 +102,7 @@ export function ProjectsList({ onViewProject, onCreateProject, onOpenGantt, onEd
       const data = await getProjectsList();
       setProjects(data);
     } catch (error) {
-      // eslint-disable-next-line no-console
+
 
       console.error('Error loading projects:', error);
       toast.error(t('errors.load'));
@@ -167,11 +167,11 @@ export function ProjectsList({ onViewProject, onCreateProject, onOpenGantt, onEd
     const margenRealPromedio =
       projectsWithBudget.length > 0
         ? projectsWithBudget.reduce((sum, p) => {
-            const total = p.budget ?? 0;
-            const cost = p.actual_cost ?? 0;
-            const marginPct = total > 0 ? ((total - cost) / total) * 100 : 0;
-            return sum + marginPct;
-          }, 0) / projectsWithBudget.length
+          const total = p.budget ?? 0;
+          const cost = p.actual_cost ?? 0;
+          const marginPct = total > 0 ? ((total - cost) / total) * 100 : 0;
+          return sum + marginPct;
+        }, 0) / projectsWithBudget.length
         : 0;
 
     const facturacionPendiente = projects
@@ -333,7 +333,7 @@ export function ProjectsList({ onViewProject, onCreateProject, onOpenGantt, onEd
         description: project.name,
       });
     } catch (error) {
-      // eslint-disable-next-line no-console
+
       console.error('Error updating project status:', error);
       toast.error(t('errors.updateStatus'));
     }
@@ -354,7 +354,7 @@ export function ProjectsList({ onViewProject, onCreateProject, onOpenGantt, onEd
 
       toast.success(t('toasts.cancelled'), { description: project.name });
     } catch (error) {
-      // eslint-disable-next-line no-console
+
       console.error('Error cancelling project:', error);
       toast.error(t('errors.cancel'));
     }
@@ -434,7 +434,7 @@ export function ProjectsList({ onViewProject, onCreateProject, onOpenGantt, onEd
             </div>
           </div>
           <div className="text-2xl font-semibold text-foreground">
-            {t('currency.eur', { value: kpis.facturacionPendiente.toLocaleString('es-CO') })}
+            {t('currencyOptions.eur', { value: kpis.facturacionPendiente.toLocaleString('es-CO') })}
           </div>
           <p className="mt-1 text-xs text-muted-foreground">{t('kpis.activeProjectsLabel')}</p>
         </div>
@@ -647,10 +647,8 @@ export function ProjectsList({ onViewProject, onCreateProject, onOpenGantt, onEd
                           <div className="flex items-center gap-1.5">
 
                             <span
-                              className={`text-sm ${
-
-                                overdue ? 'font-medium text-destructive' : 'text-foreground'
-                              }`}
+                              className={`text-sm ${overdue ? 'font-medium text-destructive' : 'text-foreground'
+                                }`}
                             >
 
                               {new Date(project.planned_end_date).toLocaleDateString('es-CO', {
@@ -723,17 +721,15 @@ export function ProjectsList({ onViewProject, onCreateProject, onOpenGantt, onEd
                           <div>
 
                             <div
-                              className={`text-sm font-medium ${
-                                margin.deltaMargen >= 0 ? 'text-success' : 'text-destructive'
-                              }`}
+                              className={`text-sm font-medium ${margin.deltaMargen >= 0 ? 'text-success' : 'text-destructive'
+                                }`}
                             >
                               {margin.deltaMargen >= 0 ? '+' : ''}
                               {t('currency.eur', { value: margin.deltaMargen.toLocaleString('es-CO') })}
                             </div>
                             <div
-                              className={`text-xs ${
-                                margin.deltaMargenPct >= 0 ? 'text-success' : 'text-destructive'
-                              }`}
+                              className={`text-xs ${margin.deltaMargenPct >= 0 ? 'text-success' : 'text-destructive'
+                                }`}
                             >
                               {margin.deltaMargenPct >= 0 ? '+' : ''}
 
@@ -795,7 +791,7 @@ export function ProjectsList({ onViewProject, onCreateProject, onOpenGantt, onEd
                               className="text-destructive"
                             >
                               <Archive className="mr-2 h-4 w-4" />
-                              {t('actions.cancel')}
+                              {tc('cancel')}
                             </DropdownMenuItem>
                           </DropdownMenuContent>
 

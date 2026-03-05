@@ -241,7 +241,12 @@
   "budget": "Presupuesto",
   "team": "Equipo",
   "filters": {
-    "title": "Filtros"
+    "title": "Filtros",
+    "status": "Estado",
+    "type": "Tipo",
+    "priority": "Prioridad",
+    "onlyAtRisk": "Solo proyectos en riesgo",
+    "count": "Filtros"
   },
   "search": {
     "placeholder": "Buscar proyectos..."
@@ -297,6 +302,57 @@
     "pause": "Pausar proyecto",
     "cancel": "Cancelar proyecto",
     "view": "Ver",
-    "edit": "Editar"
+    "edit": "Editar",
+    "backToList": "Volver a la lista de proyectos",
+     "clearFilters": "Limpiar filtros"
+  },
+  "currencyOptions": {
+    "usd": "USD ($)",
+    "eur": "EUR (€)",
+    "gbp": "GBP (£)",
+    "chf": "CHF (CHF)"
+  },
+  "fields": {
+    "branch": "Sucursal",
+    "address": "Dirección",
+    "description": "Descripción",
+    "currency": "Moneda",
+    "startDate": "Fecha de inicio",
+    "endDate": "Fecha de fin",
+    "client": "Cliente",
+    "type": "Tipo",
+    "status": "Estado",
+    "budget": "Presupuesto",
+    "name": "Nombre del proyecto"
+  },
+  "placeholders": {
+    "branch": "Seleccionar sucursal",
+    "address": "Dirección del proyecto",
+    "description": "Describe el proyecto, características especiales, etc.",
+    "budget": "Ej: 50000",
+    "currency": "Seleccionar moneda",
+    "name": "Ej: Piscina Residencial Premium",
+    "client": "Seleccionar cliente",
+    "type": "Seleccionar tipo",
+    "status": "Seleccionar estado"
+  },
+  "create": {
+    "title": "Nuevo Proyecto",
+    "subtitle": "Crear un nuevo proyecto de construcción o mantenimiento",
+    "basicInformation": "Información Básica",
+    "createButton": "Crear proyecto"
+  },
+  "clientSelector": {
+    "searchPlaceholder": "Buscar cliente...",
+    "empty": {
+      "title": "No se encontraron clientes",
+      "subtitle": "Intenta ajustar el término de búsqueda"
+    },
+    "status": {
+      "prospect": "Prospecto",
+      "active": "Activo",
+      "vip": "VIP",
+      "inactive": "Inactivo"
+    }
   }
 }
