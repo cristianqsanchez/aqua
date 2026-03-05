@@ -239,5 +239,64 @@
   "tasks": "Tasks",
   "timeline": "Timeline",
   "budget": "Budget",
-  "team": "Team"
+  "team": "Team",
+  "filters": {
+    "title": "Filters"
+  },
+  "search": {
+    "placeholder": "Search projects..."
+  },
+  "kpis": {
+    "activeProjects": "Active projects",
+    "activeProjectsDescription": "Projects currently in progress or on hold",
+    "atRisk": "At risk",
+    "atRiskDescription": "Projects with margin below the estimate",
+    "avgRealMargin": "Avg. actual margin",
+    "allProjectsLabel": "All projects",
+    "pendingInvoicing": "Pending invoicing",
+    "activeProjectsLabel": "Active only"
+  },
+  "currency": {
+    "eur": "EUR (€)"
+  },
+  "status": {
+    "inProgress": "In progress",
+    "onHold": "On hold",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "planning": "Planning"
+  },
+  "priority": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High"
+  },
+  "type": {
+    "renovation": "Renovation",
+    "maintenance": "Maintenance",
+    "repair": "Repair",
+    "newConstruction": "New construction"
+  },
+  "table": {
+    "code": "Code",
+    "project": "Project",
+    "type": "Type",
+    "customer": "Customer",
+    "status": "Status",
+    "plannedEnd": "Planned end",
+    "progress": "Progress",
+    "total": "Total",
+    "realCost": "Actual cost",
+    "estimatedMargin": "Estimated margin",
+    "realMargin": "Actual margin",
+    "deltaMargin": "Margin variance"
+  },
+  "actions": {
+    "newProject": "New project",
+    "openGantt": "Open Gantt",
+    "pause": "Pause project",
+    "cancel": "Cancel project",
+    "view": "View",
+    "edit": "Edit"
+  }
 }

@@ -239,5 +239,64 @@
   "tasks": "Tareas",
   "timeline": "Cronología",
   "budget": "Presupuesto",
-  "team": "Equipo"
+  "team": "Equipo",
+  "filters": {
+    "title": "Filtros"
+  },
+  "search": {
+    "placeholder": "Buscar proyectos..."
+  },
+  "kpis": {
+    "activeProjects": "Proyectos activos",
+    "activeProjectsDescription": "Proyectos en progreso o en pausa",
+    "atRisk": "En riesgo",
+    "atRiskDescription": "Proyectos con margen por debajo del estimado",
+    "avgRealMargin": "Margen real promedio",
+    "allProjectsLabel": "Todos los proyectos",
+    "pendingInvoicing": "Pendiente de facturar",
+    "activeProjectsLabel": "Solo activos"
+  },
+  "currency": {
+    "eur": "EUR (€)"
+  },
+  "status": {
+    "inProgress": "En progreso",
+    "onHold": "En pausa",
+    "completed": "Completado",
+    "cancelled": "Cancelado",
+    "planning": "Planificación"
+  },
+  "priority": {
+    "low": "Baja",
+    "medium": "Media",
+    "high": "Alta"
+  },
+  "type": {
+    "renovation": "Renovación",
+    "maintenance": "Mantenimiento",
+    "repair": "Reparación",
+    "newConstruction": "Obra nueva"
+  },
+  "table": {
+    "code": "Código",
+    "project": "Proyecto",
+    "type": "Tipo",
+    "customer": "Cliente",
+    "status": "Estado",
+    "plannedEnd": "Fin planificado",
+    "progress": "Progreso",
+    "total": "Total",
+    "realCost": "Costo real",
+    "estimatedMargin": "Margen estimado",
+    "realMargin": "Margen real",
+    "deltaMargin": "Variación de margen"
+  },
+  "actions": {
+    "newProject": "Nuevo proyecto",
+    "openGantt": "Abrir Gantt",
+    "pause": "Pausar proyecto",
+    "cancel": "Cancelar proyecto",
+    "view": "Ver",
+    "edit": "Editar"
+  }
 }
