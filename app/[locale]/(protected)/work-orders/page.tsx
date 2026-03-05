@@ -88,40 +88,40 @@ export default function WorkOrdersPage() {
         <CreateWorkOrder onBack={handleBackToList} />
       )}
 
-      {/* {currentView === 'kanban' && ( */}
-      {/*   <> */}
-      {/*     <div className="mb-6 flex items-center justify-between"> */}
-      {/*       <div className="flex items-center gap-4"> */}
-      {/*         <Button */}
-      {/*           variant="ghost" */}
-      {/*           onClick={handleBackToList} */}
-      {/*           className="gap-2" */}
-      {/*         > */}
-      {/*           <ArrowLeft className="w-4 h-4" /> */}
-      {/*           {tCommon('back')} */}
-      {/*         </Button> */}
-      {/**/}
-      {/*         <div> */}
-      {/*           <h1 className="text-2xl font-semibold text-foreground"> */}
-      {/*             Kanban - {tNav('workOrders')} */}
-      {/*           </h1> */}
-      {/*           <p className="text-sm text-muted-foreground mt-1"> */}
-      {/*             {tWorkOrders('kanbanDescription')} */}
-      {/*           </p> */}
-      {/*         </div> */}
-      {/*       </div> */}
-      {/**/}
-      {/*       <Button className="gap-2" onClick={handleCreateWorkOrder}> */}
-      {/*         <Plus className="w-4 h-4" /> */}
-      {/*         {tCommon('create')} */}
-      {/*       </Button> */}
-      {/*     </div> */}
-      {/**/}
-      {/*     <WorkOrdersKanban onViewWorkOrder={handleViewWorkOrder} /> */}
-      {/**/}
-      {/*   </> */}
-      {/**/}
-      {/* )} */}
+      {currentView === 'kanban' && (
+        <>
+          <div className="mb-6 flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <Button
+                variant="ghost"
+                onClick={handleBackToList}
+                className="gap-2"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                {tCommon('back')}
+              </Button>
+
+              <div>
+                <h1 className="text-2xl font-semibold text-foreground">
+                  Kanban - {tNav('workOrders')}
+                </h1>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {tWorkOrders('kanbanDescription')}
+                </p>
+              </div>
+            </div>
+
+            <Button className="gap-2" onClick={handleCreateWorkOrder}>
+              <Plus className="w-4 h-4" />
+              {tCommon('create')}
+            </Button>
+          </div>
+
+          <WorkOrdersKanban onViewWorkOrder={handleViewWorkOrder} />
+
+        </>
+
+      )}
     </div>
   );
 }
