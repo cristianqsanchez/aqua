@@ -2,6 +2,7 @@ import { Header } from '@/components/layout/dashboard-header'
 import { Sidebar } from '@/components/layout/dashboard-sidebar'
 import { UserProvider } from '@/components/providers/user-provider'
 import { getUser } from '@/components/providers/user.actions'
+import { Toaster } from '@/components/ui/sonner'
 import type { ReactNode } from 'react'
 
 type Props = {
@@ -20,6 +21,7 @@ export default async function ProtectedLayout({ children }: Props) {
           <main className="flex-1">
             {children}
           </main>
+          <Toaster />
         </div>
       </div>
     </UserProvider>
